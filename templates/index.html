@@ -1,0 +1,39 @@
+{% extends "_layout.html" %}
+
+{% block body %}
+<header>
+  <h1>Lupine Software</h1>
+</header>
+
+<section id="main">
+  <article>
+    <h2>Team</h2>
+    <ul>
+      <li>
+        <span class="name">Yasuhiro Asaka</span>
+        <span class="role">Programmer</span>
+        <!--<a class="mail" href="mailto:yasuhiro.asaka@lupine-software.com">yasuhiro.asaka@lupine-software.com</a>--></li>
+      <li>
+        <span class="name">Misaki Asaka</span>
+        <span class="role">Designer</span>
+        <!--<a class="mail" href="mailto:misaki.asaka@lupine-software.com">misaki.asaka@lupine-software.com</a>--></li>
+    </ul>
+    <p><a href="{{ url_for('static', filename='humans.txt') }}">humans.txt</a></p>
+  </article>
+  <article>
+    <h2>Work</h2>
+    <p>Development of <a href="#" target="_blank">Scrolliris</a>
+      <span class="desc">(A reactive publication platform utilizes reading data analytics)</span></p>
+    <p>Comming soon, Stay tuned!</p>
+  </article>
+  <article>
+    <h2>Info</h2>
+    <p><a class="mail" href="mailto:feedback@lupine-software.com">feedback@lupine-software.com</a></p>
+    <p>We're woking on prototype application and incorporation.<span class="date">(2017-06)</span></p>
+  </article>
+</section>
+
+<footer>
+  &copy;&nbsp;2017 Lupine Software, LLC
+</footer>
+{% endblock %}

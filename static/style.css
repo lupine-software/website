@@ -1,0 +1,34 @@
+body {
+  background: white;
+}
+
+/* span */
+.name,
+.role,
+.mail,
+.date {
+  display: inline-block;
+  margin: 0 0.16rem;
+}
+
+.role,
+.desc,
+.date {
+  color: gray;
+  font-size: 85%;
+}
+
+/* heading */
+h2 {
+  margin: 1.66rem 0 1.23rem 0;
+}
+
+/* link */
+del > a {
+  text-decoration: line-through;
+}
+
+/* footer */
+footer {
+  margin-top: 0.98rem;
+}
