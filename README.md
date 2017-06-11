@@ -2,9 +2,10 @@
 
 `/lytɛs/`
 
+[![build status](https://gitlab.com/lupine-software/lutece/badges/master/build.svg)](https://gitlab.com/lupine-software/lutece/commits/master)
 
 ```txt
-Lutèce; ...
+Lutèce; LUpine sofTwarE website to introduCE about our product and ourselves
 ```
 
 The website of [Lupine Software](https://lupine-software.com).
@@ -83,7 +84,7 @@ E.g. to publish to gcp (appengine)
 
 ## License
 
-Lutece; Copyright (c) 2017 Lupine Software, LLC
+Lutèce; Copyright (c) 2017 Lupine Software, LLC
 
 ### Software
 
