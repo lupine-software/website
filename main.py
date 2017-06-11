@@ -1,8 +1,9 @@
-"""Lutece application"""
+"""Lutèce application"""
 
 from flask import Flask, render_template
 
 
+# pylint: disable=invalid-name
 app = Flask(__name__, static_folder='static', static_url_path='')
 
 
