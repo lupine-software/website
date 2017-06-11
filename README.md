@@ -78,7 +78,8 @@ E.g. to publish to gcp (appengine)
 
 ```zsh
 : deploy website
-(venv) % ./bin/load-gcloud && gcloud app deploy ./app.yaml --project <project-id> --verbosity=info
+(venv) % source ./bin/load-gcloud
+(venv) % gcloud app deploy ./app.yaml --project <project-id> --verbosity=info
 ```
 
 
