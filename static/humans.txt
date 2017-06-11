@@ -10,6 +10,6 @@ Mail: misaki.asaka@lupine-software.com
 From: Saitama, Japan
 
 /* SITE */
-Last update: 2017/06/08
+Last update: 2017/06/12
 Language: English
 Doctype: HTML5
