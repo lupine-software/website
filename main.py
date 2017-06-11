@@ -12,6 +12,7 @@ def home():
     """Home."""
     return render_template('index.html')
 
+
 @app.errorhandler(404)
 def not_found(_error):
     """Not Found."""
