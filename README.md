@@ -34,10 +34,16 @@ The website of [Lupine Software](https://lupine-software.com).
 
 ## Development
 
+### Check
+
+```zsh
+(venv) % pip install pylint flake8
+```
+
 ### Serve
 
 ```zsh
-% python main.py
+(venv) % python main.py
 ```
 
 
@@ -71,7 +77,7 @@ E.g. to publish to gcp (appengine)
 
 ```zsh
 : deploy website
-(env) % ./bin/load-gcloud && gcloud app deploy ./app.yaml --project <project-id> --verbosity=info
+(venv) % ./bin/load-gcloud && gcloud app deploy ./app.yaml --project <project-id> --verbosity=info
 ```
 
 
