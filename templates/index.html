@@ -18,18 +18,40 @@
         <span class="role">Designer</span>
         <!--<a class="mail" href="mailto:misaki.asaka@lupine-software.com">misaki.asaka@lupine-software.com</a>--></li>
     </ul>
-    <p><a href="{{ url_for('static', filename='humans.txt') }}">humans.txt</a></p>
+    <p><a href="{{url_for('static', filename='humans.txt')}}">humans.txt</a></p>
   </article>
 
   <article>
     <h2>Product</h2>
     <p><a href="#" target="_blank">Scrolliris</a>
       <span class="desc">(A reactive publication platform utilizes reading data analytics and/or its widget)</span></p>
-    <div class="letter">
+    <p>Comming soon, Stay tuned!</p>
+    <div class="screenshot">
+      <h3>Screenshots from Prototype</h3>
+      <figure>
+        <a href="{{url_for('static', filename='img/scrolliris-reader-view-sample-20170611.png')}}" target="_blank">
+          <img src="{{ url_for('static', filename='img/scrolliris-reader-view-sample-20170611-thumb.png')}}" width="200" alt="Scrolliris - reader's view example">
+          <figcaption>Fig1. - Scrolliris reader's view sample</figcaption>
+        </a>
+      </figure>
+      <figure>
+        <a href="{{url_for('static', filename='img/scrolliris-author-view-sample-20170611.png')}}" target="_blank">
+          <img src="{{ url_for('static', filename='img/scrolliris-author-view-sample-20170611-thumb.png')}}" width="200" alt="Scrolliris - author's view example">
+          <figcaption>Fig2. - Scrolliris author's view sample</figcaption>
+        </a>
+      </figure>
+      <figure>
+        <a href="{{url_for('static', filename='img/scrolliris-minimap-widget-sample-20170611.png')}}" target="_blank">
+          <img src="{{ url_for('static', filename='img/scrolliris-minimap-widget-sample-20170611-thumb.png')}}" width="200" alt="Scrolliris - reading heat-minimap widget sample">
+          <figcaption>Fig3. - Scrolliris reading heat-minimap widget sample</figcaption>
+        </a>
+      </figure>
+    </div>
+    <div class="newsletter">
      <form action="https://tinyletter.com/scrolliris" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/scrolliris', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
-       <p>Comming soon, Stay tuned! There is a <a href="http://tinyletter.com/scrolliris">Newsletter</a> from us.<br>
+       <p>Subscribe <a href="http://tinyletter.com/scrolliris">Newsletter</a> from us.<br>
          <label for="tlemail">Enter your email address.</label>
-         <span class="link">It's <a href="https://tinyletter.com" target="_blank">powered by TinyLetter</a>.</span>
+         <span class="link">(powered by <a href="https://tinyletter.com" target="_blank">TinyLetter</a>)</span>
        </p>
        <input type="text" name="email" id="tlemail" />
        <input type="hidden" value="1" name="embed"/>
