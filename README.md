@@ -1,18 +1,19 @@
-# Lutece
+# Lutèce
 
-`//`
+`/lytɛs/`
 
 
 ```txt
-Lutuce; ...
+Lutèce; ...
 ```
 
-The team website of [Lupine Software](https://team.lupine-software.com).
+The website of [Lupine Software](https://lupine-software.com).
 
 
 ## Requirements
 
 * Python `3.5`
+
 
 ## Setup
 
@@ -66,7 +67,7 @@ At first, setup for production environment.
 
 ### Deployment
 
-Publish
+E.g. to publish to gcp (appengine)
 
 ```zsh
 : deploy website
