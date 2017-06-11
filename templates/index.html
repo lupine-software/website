@@ -20,12 +20,24 @@
     </ul>
     <p><a href="{{ url_for('static', filename='humans.txt') }}">humans.txt</a></p>
   </article>
+
   <article>
     <h2>Work</h2>
     <p>Development of <a href="#" target="_blank">Scrolliris</a>
-      <span class="desc">(A reactive publication platform utilizes reading data analytics)</span></p>
-    <p>Comming soon, Stay tuned!</p>
+      <span class="desc">(A reactive publication platform utilizes reading data analytics and/or its widget)</span></p>
+    <div class="letter">
+     <form action="https://tinyletter.com/scrolliris" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/scrolliris', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+       <p>Comming soon, Stay tuned! There is a <a href="http://tinyletter.com/scrolliris">Newsletter</a> from us.<br>
+         <label for="tlemail">Enter your email address.</label>
+         <span class="link">It's <a href="https://tinyletter.com" target="_blank">powered by TinyLetter</a>.</span>
+       </p>
+       <input type="text" name="email" id="tlemail" />
+       <input type="hidden" value="1" name="embed"/>
+       <input type="submit" value="Subscribe" />
+    </form>
+    </div>
   </article>
+
   <article>
     <h2>Info</h2>
     <p><a class="mail" href="mailto:feedback@lupine-software.com">feedback@lupine-software.com</a></p>

@@ -28,6 +28,38 @@ del > a {
   text-decoration: line-through;
 }
 
+/* newsletter */
+.letter input[type="text"],
+.letter input[type="submit"] {
+  display: inline-block;
+}
+
+.letter input[type="text"] {
+  height: 1.06rem;
+  width: 16.82rem;
+  border: 1px solid gray;
+  padding: 4px 6px;
+  border-radius: 2px;
+}
+
+.letter input[type="submit"] {
+  background-color: #f3f3f3;
+  border: 1px solid #888888;
+  border-radius: 2px;
+  padding: 0.27rem 1.64rem;
+  margin: 0 0 0 0.46rem;
+}
+
+.letter input[type="submit"]:hover {
+  background-color: #d3d3d3;
+}
+
+.letter .link {
+  margin: 0.3rem 0;
+  padding: 0;
+  display: inline-block;
+}
+
 /* footer */
 footer {
   margin-top: 0.98rem;
