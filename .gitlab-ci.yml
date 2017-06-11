@@ -1,0 +1,41 @@
+stages:
+  - check
+  - lint
+
+style-check:
+  stage: check
+  image: python:3.5
+  before_script:
+    - python --version
+    - pip --version
+    - export PIP_CACHE_DIR="pip-cache"
+    - pip install --upgrade pip setuptools
+    - pip install -r requirements.txt
+    - pip install flake8
+  script:
+    - flake8 main.py
+  cache:
+    untracked: true
+    paths:
+    - pip-cache
+  except:
+    - tags
+
+style-lint:
+  stage: lint
+  image: python:3.5
+  before_script:
+    - python --version
+    - pip --version
+    - export PIP_CACHE_DIR="pip-cache"
+    - pip install --upgrade pip setuptools
+    - pip install -r requirements.txt
+    - pip install pylint
+  script:
+    - pylint main.py
+  cache:
+    untracked: true
+    paths:
+      - pip-cache
+  except:
+    - tags
