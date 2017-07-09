@@ -4,6 +4,8 @@
 
 [![build status](https://gitlab.com/lupine-software/lutece/badges/master/build.svg)](https://gitlab.com/lupine-software/lutece/commits/master)
 
+![Lupine Software, LLC](https://gitlab.com/lupine-software/lutece/raw/master/static/img/lupine-software-logo-300x300.png)
+
 ```txt
 Lutèce; LUpine sofTwarE website to introduCE about our product and ourselves
 ```
