@@ -7,9 +7,9 @@ From: Yokohama, Japan
 Name: Misaki Asaka
 Role: Designer
 Mail: misaki.asaka@lupine-software.com
-From: Saitama, Japan
+From: Kazo, Japan
 
 /* SITE */
-Last update: 2017/06/19
+Last update: 2017/07/10
 Language: English
 Doctype: HTML5
