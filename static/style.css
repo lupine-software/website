@@ -19,7 +19,7 @@ footer {
   margin-top: 2.98rem;
 }
 
-/* span */
+/* p, span */
 .name,
 .role,
 .mail,
@@ -45,6 +45,14 @@ footer {
 
 .link a {
   color: gray;
+}
+
+li > p {
+  margin: 0.08rem 0;
+}
+
+p.desc > span.status.warn {
+  color: orange;
 }
 
 /* heading */
