@@ -1,5 +1,13 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes: none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
+
 body {
-  background: white;
+  background: #ffffff;
 }
 
 section#main {
@@ -7,7 +15,7 @@ section#main {
 }
 
 article {
-  margin: 0.08rem;
+  margin: 0.11rem 0.08rem;
 }
 
 header,
@@ -17,6 +25,60 @@ footer {
 
 footer {
   margin-top: 2.98rem;
+}
+
+ul {
+  margin: 1.29rem 0 1.63rem 1.62rem;
+}
+
+p {
+  margin: 1.29rem 0.63rem;
+  line-height: 1.09em;
+}
+
+ul li {
+  list-style: circle;
+  line-height: 1.26em;
+}
+
+/* images */
+article.product img {
+  margin: 0 0 0.32rem 0.03rem;
+}
+article.credential img {
+  margin: 0.71rem 0 0.22rem 0.63rem;
+}
+
+/* form */
+form {
+  margin: 1.29rem 0 1.63rem 0.63rem;
+}
+
+form p {
+  margin-left: 0.11rem;
+  margin-right: 0;
+}
+
+/* heading */
+h1 {
+  font-size: 1.86rem;
+  font-weight: normal;
+  margin: 1.82rem 0 1.23rem 0.63rem;
+  color: #888899;
+}
+
+h2 {
+  font-size: 1.36rem;
+  font-weight: normal;
+  margin: 1.92rem 0 1.03rem 0.63rem;
+  color: #888899;
+}
+
+h3 {
+  font-size: 0.96rem;
+  font-weight: normal;
+  margin: 1.22rem 0 0.99rem 0.63rem;
+  color: #888899;
 }
 
 /* p, span */
@@ -55,15 +117,9 @@ p.desc > span.status.warn {
   color: orange;
 }
 
-/* heading */
-h2 {
-  margin: 1.82rem 0 1.23rem 0;
-  color: #888899;
-}
-
-h3 {
-  margin: 1.22rem 0 0.99rem 0;
-  color: #888899;
+img.logo {
+  display: block;
+  margin: 0.96rem 0.72rem;
 }
 
 /* link */
@@ -79,7 +135,7 @@ del > a {
 
 .newsletter input[type="text"] {
   height: 1.06rem;
-  width: 16.82rem;
+  max-width: 16.82rem;
   border: 1px solid gray;
   padding: 4px 6px;
   border-radius: 2px;
@@ -90,7 +146,7 @@ del > a {
   border: 1px solid #888888;
   border-radius: 2px;
   padding: 0.27rem 1.64rem;
-  margin: 0 0 0 0.06rem;
+  margin: 0.88rem 0 0 0.06rem;
 }
 
 .newsletter input[type="submit"]:hover {
@@ -104,7 +160,7 @@ del > a {
 
 .screenshot figure {
   display: inline-block;
-  margin: 0.22rem 1.07rem 0 0;
+  margin: 0.32rem 1.07rem 0.48rem 0.69rem;
 }
 
 .screenshot figure img {
