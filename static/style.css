@@ -27,13 +27,15 @@ footer {
   margin-top: 2.98rem;
 }
 
-ul {
-  margin: 1.29rem 0 1.63rem 1.62rem;
-}
-
 p {
   margin: 1.29rem 0.63rem;
   line-height: 1.09em;
+}
+
+/* lists */
+ul {
+  margin: 1.29rem 0 1.63rem 1.62rem;
+  -webkit-margin-start: 35px;
 }
 
 ul li {
@@ -87,7 +89,7 @@ h3 {
 .mail,
 .date {
   display: inline-block;
-  margin: 0 0.16rem;
+  margin: 0 0 0 0.32rem;
 }
 
 .role,
@@ -177,4 +179,17 @@ del > a {
 .screenshot figure figcaption {
   font-size: 80%;
   color: gray;
+}
+
+@media only screen and (max-width: 320px) {
+  ul {
+    -webkit-margin-start: 55px;
+  }
+
+  li {
+    font-size: 0.80em;
+  }
+  p {
+    font-size: 0.90em;
+  }
 }
