@@ -1,6 +1,6 @@
 app.yaml
 google-cloud-sdk*
 
-publi.sh
+/bin/*.sh
 
 venv
