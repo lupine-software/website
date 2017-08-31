@@ -34,55 +34,60 @@ The website of [Lupine Software](https://lupine-software.com).
 (venv) % pip install -r requirements.txt
 ```
 
+### Dependencies
+
+TODO
+
 
 ## Development
-
-### Check
-
-```zsh
-(venv) % pip install pylint flake8
-```
-
-### Serve
 
 ```zsh
 (venv) % python main.py
 ```
 
-
-## Release
-
-### Prepare production environment
-
-At first, setup for production environment.
+### Style & Lint
 
 ```zsh
-: e.g. use google app engine
-(venv) % curl -sLO https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-157.0.0-linux-x86_64.tar.gz
+(venv) % pip install pylint flake8
+```
+
+
+## Deployment
+
+### Publishing
+
+E.g. Google App Engine
+
+```zsh
+: e.g. use google app engine (see https://cloud.google.com/sdk/docs/)
+% cd lib
+(venv) % curl -sLO https://dl.google.com/dl/cloudsdk/channels/rapid/ \
+  downloads/google-cloud-sdk-<VERSION>-linux-x86_64.tar.gz
 
 : check sha256 checksum
-(venv) % sha256sum google-cloud-sdk-157.0.0-linux-x86_64.tar.gz
-95b98fc696f38cd8b219b4ee9828737081f2b5b3bd07a3879b7b2a6a5349a73f  google-cloud-sdk-157.0.0-linux-x86_64.tar.gz
+(venv) % echo "<CHECKSUM>" "" ./google-cloud-sdk-<VERSION>-linux-x86_64.tar.gz \
+  | sha256sum -c -
+./google-cloud-sdk-<VERSION>-linux-x86_64.tar.gz: OK
+(venv) % tar zxvf google-cloud-sdk-<VERSION>-linux-x86_64.tar.gz
 
-(venv) % tar zxvf google-cloud-sdk-157.0.0-linux-x86_64.tar.gz
-
-: we don\'t install this global environment even if development
+: setup lib/ as a root for sdk
 (venv) % CLOUDSDK_ROOT_DIR=. ./google-cloud-sdk/install.sh
+(venv) % cd ../
 
 : load sdk tools
 (venv) % source ./bin/load-gcloud
 (venv) % gcloud init
 ```
 
-### Deployment
-
-E.g. to publish to gcp (appengine)
-
 ```zsh
 : deploy website
 (venv) % source ./bin/load-gcloud
 (venv) % gcloud app deploy ./app.yaml --project <project-id> --verbosity=info
 ```
+
+## Testing
+
+TODO
 
 
 ## License
