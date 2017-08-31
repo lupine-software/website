@@ -1,5 +1,6 @@
 app.yaml
-google-cloud-sdk*
+
+lib/*
 
 /bin/*.sh
 
