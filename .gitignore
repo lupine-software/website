@@ -1,7 +1,10 @@
 app.yaml
+appengine_config.py
 
 /bin/*.sh
+
 /lib
+/vendor
 
 venv
 venv2.7
