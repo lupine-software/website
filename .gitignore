@@ -1,6 +1,7 @@
 app.yaml
-google-cloud-sdk*
 
 /bin/*.sh
+/lib
 
 venv
+venv2.7

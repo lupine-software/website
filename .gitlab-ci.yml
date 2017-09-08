@@ -1,6 +1,27 @@
 stages:
+  - check2.7
   - check
+  - lint2.7
   - lint
+
+style-check27:
+  stage: check2.7
+  image: python:2.7
+  before_script:
+    - python --version
+    - pip --version
+    - export PIP_CACHE_DIR="pip-cache"
+    - pip install --upgrade pip setuptools
+    - pip install -r requirements.txt
+    - pip install flake8
+  script:
+    - flake8 main.py
+  cache:
+    untracked: true
+    paths:
+    - pip-cache
+  except:
+    - tags
 
 style-check:
   stage: check
@@ -18,6 +39,25 @@ style-check:
     untracked: true
     paths:
     - pip-cache
+  except:
+    - tags
+
+style-lint27:
+  stage: lint2.7
+  image: python:2.7
+  before_script:
+    - python --version
+    - pip --version
+    - export PIP_CACHE_DIR="pip-cache"
+    - pip install --upgrade pip setuptools
+    - pip install -r requirements.txt
+    - pip install pylint
+  script:
+    - pylint main.py
+  cache:
+    untracked: true
+    paths:
+      - pip-cache
   except:
     - tags
 

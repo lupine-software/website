@@ -1,4 +1,6 @@
-"""Lutèce application"""
+u"""Lut\xe8ce application"""
+from __future__ import print_function
+from __future__ import unicode_literals
 
 from flask import Flask, render_template
 

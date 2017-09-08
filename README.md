@@ -15,13 +15,13 @@ The website of [Lupine Software](https://lupine-software.com).
 
 ## Requirements
 
-* Python `3.5`
+* Python `3.5` (or `2.7`)
 
 
 ## Setup
 
 ```zsh
-: python
+: e.g. python3.5
 : setup venv as you like (e.g. use nodeenv on Gentoo Linux)
 % sudo emerge -av virtualenv (or just `sudo pip install virtualenv`)
 
