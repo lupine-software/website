@@ -2,9 +2,12 @@
 
 `/lytɛs/`
 
-[![build status](https://gitlab.com/lupine-software/lutece/badges/master/build.svg)](https://gitlab.com/lupine-software/lutece/commits/master)
+[![build status](
+https://gitlab.com/lupine-software/lutece/badges/master/build.svg)](
+https://gitlab.com/lupine-software/lutece/commits/master)
 
-![Lupine Software LLC](https://gitlab.com/lupine-software/lutece/raw/master/static/img/lupine-software-logo-300x300.png)
+![Lupine Software LLC](
+https://gitlab.com/lupine-software/lutece/raw/master/static/img/lupine-software-logo-300x300.png)
 
 ```txt
 Lutèce; LUpine sofTwarE website to introduCE about our product and ourselves
@@ -65,7 +68,7 @@ E.g. Google App Engine
   downloads/google-cloud-sdk-<VERSION>-linux-x86_64.tar.gz
 
 : check sha256 checksum
-(venv) % echo "<CHECKSUM>" "" ./google-cloud-sdk-<VERSION>-linux-x86_64.tar.gz \
+(venv) % echo "CHECKSUM" "" ./google-cloud-sdk-<VERSION>-linux-x86_64.tar.gz \
   | sha256sum -c -
 ./google-cloud-sdk-<VERSION>-linux-x86_64.tar.gz: OK
 (venv) % tar zxvf google-cloud-sdk-<VERSION>-linux-x86_64.tar.gz
@@ -94,21 +97,21 @@ TODO
 
 Lutèce; Copyright (c) 2017 Lupine Software LLC
 
-### Software
+### Software (program)
 
 This is free software;  
 You can redistribute it and/or modify it under the terms of
-the GNU Affero General Public License (AGPL).
+the GNU Affero General Public License (`AGPL`).
 
 See `LICENSE`.
 
-### Documentation, content and images
+### Documentation, text and images (content)
+
+This work is licensed under a `CC-BY-NC-SA-4.0`.
 
 [![Creative Commons License](
 https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](
-http://creativecommons.org/licenses/by-nc-sa/4.0/)  
-This work is licensed under a [
-Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
-License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+http://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-See [Legalcode](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
+Check out [Legalcode](
+https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
