@@ -1,7 +1,7 @@
 app.yaml
 appengine_config.py
 
-/bin/*.sh
+/bin/deliver
 
 /lib
 /vendor
