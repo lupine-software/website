@@ -1,6 +1,8 @@
 app.yaml
 appengine_config.py
 
+*.egg-info
+
 /bin/deliver
 
 /lib
