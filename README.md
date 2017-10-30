@@ -121,7 +121,10 @@ E.g. Google App Engine
 
 ## Testing
 
-TODO
+```zsh
+(venv) % make test
+(venv) % make coverage
+```
 
 
 ## License
