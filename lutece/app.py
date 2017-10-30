@@ -1,5 +1,5 @@
 # encoding: utf-8
-u"""Lutéce application"""
+u"""Lutéce application."""
 
 from __future__ import print_function
 from __future__ import unicode_literals

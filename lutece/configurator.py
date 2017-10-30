@@ -8,6 +8,7 @@ class AssetConfigurator(object):
     This provides `built_asset_file` method to get filename from
     manifest.json.
     """
+
     def __init__(self, _manifest_json):  # (str) -> None
         self._app = None
         self._assets = {}
