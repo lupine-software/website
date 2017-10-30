@@ -28,6 +28,7 @@ https://gitlab.com/lupine-software/lutece)
 ## Requirements
 
 * Python `3.5` (or `2.7`)
+* Node.js `>= 7.10.1` (build)
 
 
 ## Setup
@@ -46,6 +47,22 @@ https://gitlab.com/lupine-software/lutece)
 (venv) % pip install -r requirements.txt
 ```
 
+#### Node.js
+
+```
+(venv) % pip install nodeenv
+(venv) % nodeenv -p --node=7.10.1
+
+(venv) % source venv27/bin/activate
+(venv) % npm install --upgrade -g npm
+
+: this runs also `gulp` after install
+(venv) % npm install
+
+(venv) % npm install -g gulp-cli
+(venv) % NODE_ENV=development gulp
+```
+
 ### Dependencies
 
 TODO
@@ -54,6 +71,8 @@ TODO
 ## Development
 
 ```zsh
+(venv) % NODE_ENV=development gulp watch
+
 (venv) % python main.py
 ```
 
