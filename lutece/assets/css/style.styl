@@ -1,0 +1,152 @@
+body
+  background #ffffff
+
+section#main
+  margin 0.02rem 0.29rem
+
+article
+  margin 0.11rem 0.08rem
+
+header,
+footer
+  margin-left 0.29rem
+
+footer
+  margin-top 2.98rem
+
+p
+  margin 1.29rem 0.63rem
+  line-height 1.09em
+
+
+/* list */
+ul
+  margin 1.29rem 0 1.63rem 1.62rem
+  -webkit-margin-start 35px
+
+ul li
+  list-style circle
+  line-height 1.26em
+
+
+/* image */
+article.product img
+  margin 0 0 0.32rem 0.03rem
+
+article.credential img
+  margin 0.71rem 0 0.22rem 0.63rem
+
+
+/* form */
+form
+  margin 1.29rem 0 1.63rem 0.63rem
+  p
+    margin-left 0.11rem
+    margin-right 0
+
+
+/* heading */
+h1
+  font-size 1.86rem
+  font-weight normal
+  margin 1.82rem 0 1.23rem 0.63rem
+  color #888899
+
+h2
+  font-size 1.36rem
+  font-weight normal
+  margin 1.92rem 0 1.03rem 0.63rem
+  color #888899
+
+h3
+  font-size 0.96rem
+  font-weight normal
+  margin 1.22rem 0 0.99rem 0.63rem
+  color #888899
+
+
+/* p, span */
+.name,
+.role,
+.mail,
+.date
+  display inline-block
+  margin 0 0 0 0.32rem
+
+.role,
+.desc,
+.date
+  color gray
+  font-size 85%
+
+
+/* link */
+.link
+  color gray
+  font-size 90%
+  margin 0.3rem 0
+  padding 0
+  display inline-block
+  a
+    color gray
+
+li > p
+  margin 0.08rem 0
+
+p.desc > span.status.warn
+  color orange
+
+img.logo
+  display block
+  margin 0.96rem 0.72rem
+
+del > a
+  text-decoration line-through
+
+
+.newsletter
+  input[type="text"],
+  input[type="submit"]
+    display inline-block
+
+  input[type="text"]
+    height 1.06rem
+    max-width 16.82rem
+    border 1px solid gray
+    padding 4px 6px
+    border-radius 2px
+
+  input[type="submit"]
+    background-color #f3f3f3
+    border 1px solid #888888
+    border-radius 2px
+    padding 0.27rem 1.64rem
+    margin 0.88rem 0 0 0.06rem
+    &:hover
+      background-color #d3d3d3
+
+
+.screenshot
+  margin 1.44rem 0
+  figure
+    display inline-block !important
+    margin 0.32rem 1.07rem 0.48rem 0.69rem
+    img
+      display inline-block
+      padding 0.3rem
+      margin 0 0 0.13rem 0
+      border 1px dashed #f5f5f5
+      &:hover
+        border 1px dashed #333333
+    figcaption
+      font-size 80%
+      color gray
+
+
+@media only screen and (max-width 320px)
+  ul
+    -webkit-margin-start 55px
+    li
+      font-size 0.80em
+  p
+    font-size 0.90em

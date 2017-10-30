@@ -6,5 +6,10 @@ appengine_config.py
 /lib
 /vendor
 
+node_modules
+
+static/*
+tmp
+
 venv
 venv2.7

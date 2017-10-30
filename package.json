@@ -1,0 +1,43 @@
+{
+  "name": "lutece",
+  "description": "Lutece; LUpine sofTwarE website to introduCE about our product and ourselves",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": "7.10.1",
+    "npm": "5.5.1"
+  },
+  "scripts": {
+    "test": "node --version",
+    "postinstall": "./node_modules/.bin/gulp"
+  },
+  "dependencies": {
+    "babel-core": "6.22.1",
+    "babel-loader": "6.2.10",
+    "babel-preset-es2015": "6.22.0",
+    "css-loader": "0.26.1",
+    "extract-text-webpack-plugin": "1.0.1",
+    "file-loader": "0.10.0",
+    "gulp": "3.9.1",
+    "gulp-clean": "0.3.2",
+    "gulp-copy": "1.0.0",
+    "gulp-env": "0.4.0",
+    "license-webpack-plugin": "0.4.2",
+    "npm": "5.5.1",
+    "open-iconic": "1.1.1",
+    "run-sequence": "1.2.2",
+    "style-loader": "0.13.1",
+    "stylus": "0.54.5",
+    "stylus-loader": "2.4.0",
+    "styr": "0.0.23",
+    "svg-sprite-loader": "0.2.0",
+    "url-loader": "0.5.7",
+    "vinyl-named": "1.1.0",
+    "webpack": "1.14.0",
+    "webpack-manifest-plugin": "1.1.0",
+    "webpack-stream": "3.2.0"
+  },
+  "cacheDirectories": [
+    "node_modules"
+  ]
+}

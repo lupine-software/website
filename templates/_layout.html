@@ -25,7 +25,7 @@
   <link rel="humans" type="text/plain" href="{{url_for('static', filename='humans.txt')}}">
   <link rel="robots" type="text/plain" href="{{url_for('static', filename='robots.txt')}}">
   <style>body{background-color:#ffffff;}</style>
-  <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename=built_asset_file('master.css'))}}">
 </head>
 <body>
   {% block body %}
