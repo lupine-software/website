@@ -4,6 +4,7 @@ appengine_config.py
 .env.ci
 .env
 
+.coverage
 .cache
 
 *.pyc
