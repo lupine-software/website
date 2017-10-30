@@ -1,3 +1,9 @@
+31 Oct 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
+	* Setup local ci runner
+	* Add unit tests
+	* Refactor ci job configuration
+	* Fix configurator for python 3.5
+
 30 Oct 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
 	* Add manifest.json support
 	* Move assets files from static into assets directory
