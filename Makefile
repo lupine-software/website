@@ -40,7 +40,7 @@ test:
 .PHONY: test
 
 test-coverage:
-	ENV=test py.test -c 'config/testing.ini' -s -q --cov=tirol --cov-report \
+	ENV=test py.test -c 'config/testing.ini' -s -q --cov=${app} --cov-report \
 	  term-missing:skip-covered
 .PHONY: test-coverage
 
