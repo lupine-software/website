@@ -5,21 +5,16 @@ stages:
   - lint27
   - lint
   - build
-
-variables:
-  PIP_CACHE_DIR: pip-cache
-
-cache:
-  untracked: true
-  paths:
-    - pip-cache
-    - node_modules
+  - test27
+  - test
 
 # -- stages
 
 check27:
   stage: check27
   image: python:2.7.13
+  variables:
+    PIP_CACHE_DIR: pip-cache
   before_script:
     - python --version
     - pip --version
@@ -28,12 +23,18 @@ check27:
     - make clean
   script:
     - make check
+  cache:
+    untracked: true
+    paths:
+      - pip-cache
   except:
     - tags
 
 check:
   stage: check
   image: python:3.5.4
+  variables:
+    PIP_CACHE_DIR: pip-cache
   before_script:
     - python --version
     - pip --version
@@ -42,12 +43,18 @@ check:
     - make clean
   script:
     - make check
+  cache:
+    untracked: true
+    paths:
+      - pip-cache
   except:
     - tags
 
 lint27:
   stage: lint27
   image: python:2.7.13
+  variables:
+    PIP_CACHE_DIR: pip-cache
   before_script:
     - python --version
     - pip --version
@@ -56,12 +63,18 @@ lint27:
     - ENV=test make setup
   script:
     - make lint
+  cache:
+    untracked: true
+    paths:
+      - pip-cache
   except:
     - tags
 
 lint:
   stage: lint
   image: python:3.5.4
+  variables:
+    PIP_CACHE_DIR: pip-cache
   before_script:
     - python --version
     - pip --version
@@ -70,6 +83,10 @@ lint:
     - ENV=test make setup
   script:
     - make lint
+  cache:
+    untracked: true
+    paths:
+      - pip-cache
   except:
     - tags
 
@@ -85,9 +102,58 @@ build:
     - npm install --ignore-scripts
   script:
     - make build
+  cache:
+    untracked: true
+    paths:
+      - node_modules
   artifacts:
     untracked: true
     paths:
       - static
+  except:
+    - tags
+
+test27:
+  stage: test27
+  image: python:3.5.4
+  variables:
+    PIP_CACHE_DIR: pip-cache
+    ENV: test
+  before_script:
+    - python --version
+    - pip --version
+    - pip install --upgrade pip setuptools
+    - ENV=test make setup
+  script:
+    #- make coverage
+    - make test
+  cache:
+    untracked: true
+    paths:
+      - pip-cache
+  except:
+    - tags
+
+test:
+  stage: test
+  image: python:3.5.4
+  variables:
+    PIP_CACHE_DIR: pip-cache
+    ENV: test
+  before_script:
+    - python --version
+    - pip --version
+    - pip install --upgrade pip setuptools
+    - ENV=test make setup
+  script:
+    - make coverage
+  cache:
+    untracked: true
+    paths:
+      - pip-cache
+  artifacts:
+    untracked: true
+    paths:
+      - .coverage
   except:
     - tags
