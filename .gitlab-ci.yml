@@ -4,6 +4,7 @@ stages:
   - check
   - lint27
   - lint
+  - build
 
 variables:
   PIP_CACHE_DIR: pip-cache
@@ -11,7 +12,8 @@ variables:
 cache:
   untracked: true
   paths:
-  - pip-cache
+    - pip-cache
+    - node_modules
 
 # -- stages
 
@@ -22,10 +24,10 @@ check27:
     - python --version
     - pip --version
     - pip install --upgrade pip setuptools
-    - pip install -r requirements.txt
-    - pip install flake8
+    - pip install flake8 flake8-docstrings -c constraints.txt
+    - make clean
   script:
-    - flake8 main.py
+    - make check
   except:
     - tags
 
@@ -36,10 +38,10 @@ check:
     - python --version
     - pip --version
     - pip install --upgrade pip setuptools
-    - pip install -r requirements.txt
-    - pip install flake8
+    - pip install flake8 flake8-docstrings -c constraints.txt
+    - make clean
   script:
-    - flake8 main.py
+    - make check
   except:
     - tags
 
@@ -50,10 +52,10 @@ lint27:
     - python --version
     - pip --version
     - pip install --upgrade pip setuptools
-    - pip install -r requirements.txt
-    - pip install pylint
+    - ENV=development make setup
+    - ENV=test make setup
   script:
-    - pylint main.py
+    - make lint
   except:
     - tags
 
@@ -64,9 +66,28 @@ lint:
     - python --version
     - pip --version
     - pip install --upgrade pip setuptools
-    - pip install -r requirements.txt
-    - pip install pylint
+    - ENV=development make setup
+    - ENV=test make setup
   script:
-    - pylint main.py
+    - make lint
+  except:
+    - tags
+
+build:
+  stage: build
+  image: node:7.10.1
+  variables:
+    NODE_ENV: production
+  before_script:
+    - node --version
+    - npm --version
+    - npm install --global gulp-cli
+    - npm install --ignore-scripts
+  script:
+    - make build
+  artifacts:
+    untracked: true
+    paths:
+      - static
   except:
     - tags
