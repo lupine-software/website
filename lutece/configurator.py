@@ -11,8 +11,13 @@ class AssetConfigurator(object):
 
     def __init__(self, _manifest_json):  # (str) -> None
         self._app = None
-        self._assets = {}
         self._manifest_json = _manifest_json
+
+        self._assets = {}
+
+    @property
+    def assets(self):
+        return self._assets
 
     def init_app(self, _app):  # -> None
         """Loads manifest.json and appends a template global function."""
@@ -31,6 +36,6 @@ class AssetConfigurator(object):
     def built_asset_file(self, filepath):  # (str) -> str
         """Returns built asset file name if it is in manifest.json."""
         key = filepath.encode()
-        if key not in self._assets:
+        if key not in self.assets:
             return filepath
-        return '{0}'.format(self._assets[key])
+        return '{0}'.format(self.assets[key])

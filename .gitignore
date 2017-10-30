@@ -4,6 +4,9 @@ appengine_config.py
 .env.ci
 .env
 
+.cache
+
+*.pyc
 *.egg-info
 
 /bin/deliver
