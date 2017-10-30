@@ -1,3 +1,4 @@
+# encoding: utf-8
 import pytest
 
 from lutece.configurator import AssetConfigurator
@@ -20,7 +21,7 @@ def build_dummy_app(content):
         @contextmanager
         def open_resource(self, _manifest_file, _mode):
             if isinstance(content, str):
-                yield StringIO(content.encode())
+                yield StringIO(content)
             else:
                 raise IOError
 
@@ -57,10 +58,14 @@ def test_built_asset_file_with_valid_manifest_json():
     configurator = AssetConfigurator(manifest_json)
 
     content = """{
-"file.css": "file-1234567890.css"
+"file.css": "file-123.css",
+"file.js": "file.abc.js"
 }"""
     dummy_app = build_dummy_app(content)
     configurator.init_app(dummy_app)
 
-    assert {u'file.css': u'file-1234567890.css'} == configurator.assets
-    assert 'file-1234567890.css' == configurator.built_asset_file('file.css')
+    assert {
+        'file.css': 'file-123.css',
+        'file.js': 'file.abc.js'} == configurator.assets
+    assert 'file-123.css' == configurator.built_asset_file('file.css')
+    assert 'file.abc.js' == configurator.built_asset_file('file.js')

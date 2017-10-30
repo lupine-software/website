@@ -1,5 +1,6 @@
 # encoding: utf-8
 import json
+import sys
 
 
 class AssetConfigurator(object):
@@ -35,7 +36,12 @@ class AssetConfigurator(object):
 
     def built_asset_file(self, filepath):  # (str) -> str
         """Returns built asset file name if it is in manifest.json."""
-        key = filepath.encode()
+        if sys.version_info[0] < 3:
+            key = filepath.encode()
+        else:
+            key = filepath
+
         if key not in self.assets:
             return filepath
+
         return '{0}'.format(self.assets[key])
