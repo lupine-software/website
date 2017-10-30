@@ -1,3 +1,8 @@
+30 Oct 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
+	* Add manifest.json support
+	* Move assets files from static into assets directory
+	* Add webpack bulding (via gulp) support
+
 09 Sep 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
 	* Add python 2.7 support
 	* Update progress (reorder, add)
