@@ -1,8 +1,8 @@
 # https;//docs.gitlab.com/ce/ci/yaml/
 stages:
-  - check2.7
+  - check27
   - check
-  - lint2.7
+  - lint27
   - lint
 
 variables:
@@ -15,8 +15,8 @@ cache:
 
 # -- stages
 
-style-check27:
-  stage: check2.7
+check27:
+  stage: check27
   image: python:2.7.13
   before_script:
     - python --version
@@ -29,7 +29,7 @@ style-check27:
   except:
     - tags
 
-style-check:
+check:
   stage: check
   image: python:3.5.4
   before_script:
@@ -43,8 +43,8 @@ style-check:
   except:
     - tags
 
-style-lint27:
-  stage: lint2.7
+lint27:
+  stage: lint27
   image: python:2.7.13
   before_script:
     - python --version
@@ -57,7 +57,7 @@ style-lint27:
   except:
     - tags
 
-style-lint:
+lint:
   stage: lint
   image: python:3.5.4
   before_script:
