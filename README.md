@@ -2,7 +2,7 @@
 
 `/lytɛs/`
 
-[![pipeline status][ci-build]][commit] [![coverage report][ci-cov]][commit]
+[![pipeline status][pipeline]][commit] [![coverage report][coverage]][commit]
 
 ![Lupine Software LLC](static/img/lupine-software-logo-300x300.png)
 
@@ -73,13 +73,16 @@ TODO
 ```zsh
 (venv) % NODE_ENV=development gulp watch
 
-(venv) % python main.py
+(venv) % make serve
 ```
 
 ### Style & Lint
 
 ```zsh
-(venv) % pip install pylint flake8
+(venv) % make check
+(venv) % make lint
+
+(venv) % make vet
 ```
 
 
@@ -168,6 +171,6 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 See [LICENSE](LICENSE).
 
 
-[ci-build]: https://gitlab.com/lupine-software/lutece/badges/master/build.svg
-[ci-cov]: https://gitlab.com/lupine-software/lutece/badges/master/coverage.svg
+[pipeline]: https://gitlab.com/lupine-software/lutece/badges/master/build.svg
+[coverage]: https://gitlab.com/lupine-software/lutece/badges/master/coverage.svg
 [commit]: https://gitlab.com/lupine-software/lutece/commits/master
