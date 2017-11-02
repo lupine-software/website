@@ -75,7 +75,6 @@ class AssetConfigurator(object):
         >>> c.svg_content('bundle.svg', 'img')
         ''
         """
-
         asset_file = self.built_asset_file(filepath)
         if path.basename(asset_file) == filepath:
             # built in NODE_ENV=development
