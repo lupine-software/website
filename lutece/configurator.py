@@ -86,7 +86,7 @@ class AssetConfigurator(object):
 
         content = ''
         try:
-            with open(svg_file) as f:
+            with open(svg_file, 'r') as f:
                 content = f.read()
         except IOError:
             return ''
