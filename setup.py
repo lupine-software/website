@@ -11,7 +11,9 @@ with open(os.path.join(here, 'CHANGELOG')) as f:
     CHANGELOG = f.read()
 
 requires = [
+    'bleach',
     'Flask',
+    'MarkupSafe'
 ]
 
 if sys.version_info[0] < 3:  # python 2.7

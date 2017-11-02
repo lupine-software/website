@@ -1,4 +1,6 @@
 'use strict';
 
-require('./css/reset.styl');
+require('styr.css');
+require('open-iconic.svg');
+
 require('./css/style.styl');

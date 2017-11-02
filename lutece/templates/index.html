@@ -1,113 +1,77 @@
 {% extends "_layout.html" %}
 
 {% block body %}
-<header>
-  <h1>Lupine Software</h1>
-  <img class="logo" alt="Lupine Software's Logo" width="120" height="120" src="{{url_for('static', filename='img/lupine-software-logo-300x300.png')}}">
-</header>
-
-<section id="main">
-  <article class="team">
-    <h2>Team</h2>
-    <ul>
-      <li>
-        <span class="name">Yasuhiro Asaka</span>
-        <span class="role">Programmer</span>
-        <!--<a class="mail" href="mailto:yasuhiro.asaka@lupine-software.com">yasuhiro.asaka@lupine-software.com</a>--></li>
-      <li>
-        <span class="name">Misaki Asaka</span>
-        <span class="role">Designer</span>
-        <!--<a class="mail" href="mailto:misaki.asaka@lupine-software.com">misaki.asaka@lupine-software.com</a>--></li>
-    </ul>
-    <p><a href="{{url_for('static', filename='humans.txt')}}">humans.txt</a></p>
-  </article>
-
-  <article class="product">
-    <h2>Product</h2>
-    <p>
-      <a href="https://scrolliris.com/" target="_blank"><img src="{{url_for('static', filename='img/scrolliris-logo-64x64.png')}}"></a><br><a href="https://scrolliris.com/" target="_blank">Scrolliris</a>
-      <span class="desc">(A publication platform which utilizes text readability analysis and/or its browser widget)</span></p>
-    <p>Try our <a href="https://try.scrolliris.com/">Demo</a>, and <a href="https://scrolliris.com/signup">Sign up</a> now!</p>
-    <div class="screenshot">
-      <h3>Screenshots from Prototype</h3>
-      <figure>
-        <a href="{{url_for('static', filename='img/scrolliris-reader-view-sample-20170611.png')}}" target="_blank">
-          <img src="{{ url_for('static', filename='img/scrolliris-reader-view-sample-20170611-thumb.png')}}" width="200" alt="Scrolliris - reader's view example">
-          <figcaption>Fig0. - Scrolliris reader's view sample</figcaption>
-        </a>
-      </figure>
-      <figure>
-        <a href="{{url_for('static', filename='img/scrolliris-author-view-sample-20170611.png')}}" target="_blank">
-          <img src="{{ url_for('static', filename='img/scrolliris-author-view-sample-20170611-thumb.png')}}" width="200" alt="Scrolliris - author's view example">
-          <figcaption>Fig1. - Scrolliris author's view sample</figcaption>
-        </a>
-      </figure>
-      <figure>
-        <a href="{{url_for('static', filename='img/scrolliris-minimap-widget-sample-20170710.png')}}" target="_blank">
-          <img src="{{ url_for('static', filename='img/scrolliris-minimap-widget-sample-20170710-thumb.png')}}" width="200" alt="Scrolliris - reading heat-minimap widget sample">
-          <figcaption>Fig2. - Scrolliris reading heat-minimap widget sample</figcaption>
-        </a>
-      </figure>
+<section class="product">
+  <div class="grid">
+    <div class="row">
+      <h3 class="message">We
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 9 9" role="img" aria-label="[title]">
+          <title>develop</title>
+          <path d="M4.34,5.47h0a1.06,1.06,0,0,0-.7.27A3.87,3.87,0,0,0,2.44,7.19c-.31.72.32,1.64.88,1.55a8.24,8.24,0,0,1,1.09-.1H4.35Z"/><path d="M6.36,7.18A3.87,3.87,0,0,0,5.12,5.74a1.06,1.06,0,0,0-.71-.26H4.34V8.64h.05a8.24,8.24,0,0,1,1.09.09C6.06,8.82,6.67,7.9,6.36,7.18Z"/><path d="M7.17,6l.09,0c.36-.32.42-.36.53-1S8,3.86,7.55,3.71s-.71,0-1,.46-.43.43-.45.77a1.17,1.17,0,0,0,.4,1A1,1,0,0,0,7.17,6Z"/><path d="M7.45,2.07c.42.45.52.82.45,1s-.36.38-.5.28-.16-.26,0-.45S7.45,2.07,7.45,2.07Z"/><path d="M1.62,6.2l-.08-.05c-.33-.35-.39-.4-.43-1.08S1,4,1.44,3.87s.71.08.94.55.39.47.38.81a1.17,1.17,0,0,1-.49,1A1,1,0,0,1,1.62,6.2Z"/><path d="M1.69,2.25c-.46.41-.59.77-.54,1s.33.41.47.33.18-.25.06-.44S1.69,2.25,1.69,2.25Z"/><path d="M5.83,3.79a.2.2,0,0,0,.06-.08,1.21,1.21,0,0,0,0-1.17c-.24-.67-.55-1.27-.91-1s-.53.38-.52.92-.12.7,0,1A1,1,0,0,0,5.22,4,1,1,0,0,0,5.83,3.79Z"/><path d="M4.88.25c.35.4.44.73.38.93s-.29.34-.4.25a.27.27,0,0,1,0-.4A2,2,0,0,0,4.88.25Z"/><path d="M2.69,3.85a.2.2,0,0,1-.06-.08,1.21,1.21,0,0,1,0-1.17c.23-.67.53-1.28.89-1s.54.37.54.91.13.7,0,1a1,1,0,0,1-.77.6A1,1,0,0,1,2.69,3.85Z"/><path d="M3.59.3c-.35.41-.43.74-.37.93s.3.33.41.24a.27.27,0,0,0,0-.4A2,2,0,0,1,3.59.3Z"/></svg>
+Scrolliris.</h3>
     </div>
-    <div class="newsletter">
-     <form action="https://tinyletter.com/scrolliris" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/scrolliris', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
-       <p>Subscribe <a href="http://tinyletter.com/scrolliris">Newsletter</a> from us.<br>
-         <label for="tlemail">Enter your email address.</label>
-         <span class="link">(powered by <a href="https://tinyletter.com" target="_blank">TinyLetter</a>)</span>
-       </p>
-       <input type="text" name="email" id="tlemail" />
-       <input type="hidden" value="1" name="embed"/>
-       <input type="submit" value="Subscribe" />
+    <div class="row">
+      <a href="https://about.scrolliris.com/" target="_blank"><img src="{{url_for('static', filename='img/scrolliris-logo-64x64.png')}}" alt="Scrolliris"></a><br>
+      <p class="description">
+        <a href="https://about.scrolliris.com/" target="_blank">Scrolliris</a>
+        is a publication platform which utilizes text readability analysis through browser widget.</p>
+      <p class="description">Try our <a href="https://try.scrolliris.com/">Demo</a>, and <a href="https://scrolliris.com/signup">Sign up</a> now!</p>
+    </div>
+
+    <div class="row">
+      <div class="screenshot">
+        <h6 class="title">Screenshots from Prototype</h6>
+        <div class="grid">
+          <div class="row">
+            <div class="column-5 column-v-8 column-m-16">
+              <figure>
+                <a href="{{url_for('static', filename='img/scrolliris-reader-view-sample-20170611.png')}}" target="_blank">
+                  <img src="{{ url_for('static', filename='img/scrolliris-reader-view-sample-20170611-thumb.png')}}" width="200" alt="Scrolliris - reader's view example">
+                  <figcaption>Fig0. - Scrolliris reader's view sample</figcaption>
+                </a>
+              </figure>
+            </div>
+            <div class="column-5 column-v-8 column-m-16">
+              <figure>
+                <a href="{{url_for('static', filename='img/scrolliris-author-view-sample-20170611.png')}}" target="_blank">
+                  <img src="{{ url_for('static', filename='img/scrolliris-author-view-sample-20170611-thumb.png')}}" width="200" alt="Scrolliris - author's view example">
+                  <figcaption>Fig1. - Scrolliris author's view sample</figcaption>
+                </a>
+              </figure>
+            </div>
+            <div class="column-5 column-v-8 column-m-16">
+              <figure>
+                <a href="{{url_for('static', filename='img/scrolliris-minimap-widget-sample-20170710.png')}}" target="_blank">
+                  <img src="{{ url_for('static', filename='img/scrolliris-minimap-widget-sample-20170710-thumb.png')}}" width="200" alt="Scrolliris - reading heat-minimap widget sample">
+                  <figcaption>Fig2. - Scrolliris reading heat-minimap widget sample</figcaption>
+                </a>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="newsletter flat box">
+    <h6>Subscribe Newsletter from us.</h6>
+    <form class="form" action="https://tinyletter.com/scrolliris" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/scrolliris', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+      <p class="description">
+         Product Update Newsletter. Only once per month.
+         It's powered by <a href="https://tinyletter.com" target="_blank">TinyLetter</a>, <a href="https://tinyletter.com/scrolliris/archive">Archive</a> is also available.</p>
+      <label class="label" for="tlemail">Enter your email address</label>
+      <div class="grid">
+        <div class="row">
+          <div class="field-8 field-m-16">
+            <input type="text" name="email" id="tlemail" />
+            <input type="hidden" value="1" name="embed"/>
+          </div>
+          <div class="field-8 field-m-16">
+           <input type="submit" class="primary flat button" value="Subscribe" />
+          </div>
+        </div>
+      </div>
     </form>
-    </div>
-  </article>
-
-  <article class="mission">
-    <h2>Mission</h2>
-    <p>We encourage authors to write longer texts on the web,<br>
-      and support to improve reading experience of their texts.</p>
-  </article>
-
-  <article class="progress">
-    <h2>Progress</h2>
-    <p class="desc">
-      <span class="status warn">Released!</span>&nbsp;Currently only limited features are available ;-)
-    </p>
-    <ul>
-      <li><a href="https://log.scrolliris.com/">Changelog site</a> is live<span class="date">(2017-10-03)</span></li>
-      <li>First Newsletter is issued, see <a href="https://tinyletter.com/scrolliris/archive">Archives</a><span class="date">(2017-09-30)</span></li>
-      <li>Renew product concept <a href="https://try.scrolliris.com/">Demo</a><span class="date">(2017-09-24)</span></li>
-      <li>Get a first customer in Switzerland<span class="date">(2017-09-07)</span></li>
-      <li>Public beta version<span class="date">(<del>2017-07-14</del> → 2017-09-01)</span></li>
-      <li>Get review from early adaptors and friends in Switzerland<span class="date">(2017-08-22 - 2017-09-4)</span></li>
-      <li>Create logo<span class="date">(2017-07-19)</span>
-      <li>Private beta test<span class="date">(2017-07-12, 13)</span>
-      <li>Register a domain (scrolliris.io)<span class="date">(2017-07-08)</span></li>
-      <li>Incorporate Lupine Software LLC<span class="date">(2017-07-07)</span></li>
-      <li>Get architecture review from friends in Japan<span class="date">(2017-06-29)</span></li>
-      <li>Publish a pitch video<span class="date">(2017-06-16)</span></li>
-      <li>Register a domain (scrolliris.com)<span class="date">(2017-06-04)</span></li>
-      <li>Register a domain (lupine-software.com)<span class="date">(2017-06-04)</span></li>
-    </ul>
-  </article>
-
-  <article class="credential">
-    <h2>Credential</h2>
-    <a href="https://www.credential.net/xudv118k" target="_blank">
-      <img src="https://dl.grauwoelfchen.net/file/lupine-software/lupine-software-startup-school-badge-by-ycombinator-149782470388.png" width="60" height="60" alt="The Certificate of Startup School by Y Combinator">
-    </a>
-    <p>We are a guraduate of <a href="https://www.startupschool.org/" target="_blank">Startup School</a> by Y Combinator (SUS2017).<br>
-       <a href="https://www.startupschool.org/presentations/199">Our pitch video presentation</a> is live in their site as virtual presentation day.</p>
-  </article>
-
-  <article>
-    <h2>Contact</h2>
-    <p><a class="mail" href="mailto:feedback@lupine-software.com">feedback&#64;lupine-software.com</a></p>
-  </article>
+  </div>
 </section>
-
-<footer>
-  <p><a href="http://status.lupine-software.com/" target="_blank">Server status</a></p>
-  <p><a href="https://gitlab.com/lupine-software/lutece">AGPL</a>,&copy;&nbsp;2017 Lupine Software LLC</p>
-</footer>
 {% endblock %}

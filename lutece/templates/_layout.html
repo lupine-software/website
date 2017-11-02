@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta name="description" content="The website of Lupine Software LLC. We develop Scrolliris.">
   <meta name="author" content="Lupine Software LLC">
   <meta name="keywords" content="Lupine Software,Scrolliris">
@@ -25,10 +26,33 @@
   <link rel="humans" type="text/plain" href="{{url_for('static', filename='humans.txt')}}">
   <link rel="robots" type="text/plain" href="{{url_for('static', filename='robots.txt')}}">
   <style>body{background-color:#ffffff;}</style>
+  <link href="//fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:300" rel="stylesheet">
   <link rel="stylesheet" href="{{url_for('static', filename=built_asset_file('master.css'))}}">
 </head>
 <body>
-  {% block body %}
-  {% endblock %}
+  <div class="wrapper">
+    <div class="grid">
+      <div class="row">
+        <div class="offset-4 column-8 offset-v-4 column-v-8 offset-l-3 column-l-10 offset-m-2 column-m-12 offset-n-1 column-n-14 column-s-16">
+          {% include "_header.html" %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-4 column-8 offset-v-4 column-v-8 offset-l-3 column-l-10 offset-m-2 column-m-12 offset-n-1 column-n-14 column-s-16">
+          {% block body %}
+          {% endblock %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-4 column-8 offset-v-4 column-v-8 offset-l-3 column-l-10 offset-m-2 column-m-12 offset-n-1 column-n-14 column-s-16">
+          {% include "_footer.html" %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+    {{svg_content('img/master.svg')|safe}}
+  </svg>
 </body>
 </html>

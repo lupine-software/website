@@ -1,11 +1,7 @@
 body
   background #ffffff
-
-section#main
-  margin 0.02rem 0.29rem
-
-article
-  margin 0.11rem 0.08rem
+  font-family 'Open Sans', sans-serif
+  zoom 100%
 
 header,
 footer
@@ -13,57 +9,95 @@ footer
 
 footer
   margin-top 2.98rem
+  padding-left 0.71rem
+
+.wrapper section
+  padding 0.92rem 0.81rem
 
 p
-  margin 1.29rem 0.63rem
+  font-family 'Roboto Slab', sans
   line-height 1.09em
 
+del > a
+  text-decoration line-through
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-family 'Open Sans', sans-serif
+  font-weight normal
+
+
+/* header */
+header
+  .menu
+    margin-top 0.81rem
+    .item:first-child
+      padding-left 0.41rem
+    .item:last-child
+      display inline-block
+      background none
+      vertical-align top
+      margin-top 0
+      padding-top 0.09rem
+      padding-right 0.35rem
+      margin-top 0.67rem
+    .item:not(:last-child)
+      padding 0.18rem 0.46rem 0.21rem 0.46rem
+      &:hover
+        background none
+        border-bottom 1px solid darkgray
+      &.active
+        border-bottom 1px solid lightgray
+      &:hover,
+      &.active
+        padding-bottom 0.11rem
+        border-radius 0
+        text-decoration none
+
+header .logo
+  text-decoration none
+  color #666666
+  h1
+    margin 0.72rem 0 0.62rem 0.22rem
+    padding 0
+    font-size 1.22em
+    font-weight normal
+    display inline-block
+    vertical-align top
+    .logo-mark,
+    .logo-type
+      display inline-block
+    .logo-mark
+      margin 0 1.08rem 0 0.54rem
+    .logo-type
+      font-family 'Open Sans', serif
+      font-size 0.998em
+      vertical-align top
+      margin 0.67rem 0 0 0
+
+.divider
+  margin 3.14rem 0
+  border-top 1px solid #d3d3d3
 
 /* list */
 ul
-  margin 1.29rem 0 1.63rem 1.62rem
-  -webkit-margin-start 35px
+  padding-left 1.6rem
+  li
+    line-height 1.3em
 
-ul li
-  list-style circle
-  line-height 1.26em
-
+li > p
+  margin 0.08rem 0
 
 /* image */
-article.product img
+section.product img
   margin 0 0 0.32rem 0.03rem
 
-article.credential img
+section.credential img
   margin 0.71rem 0 0.22rem 0.63rem
-
-
-/* form */
-form
-  margin 1.29rem 0 1.63rem 0.63rem
-  p
-    margin-left 0.11rem
-    margin-right 0
-
-
-/* heading */
-h1
-  font-size 1.86rem
-  font-weight normal
-  margin 1.82rem 0 1.23rem 0.63rem
-  color #888899
-
-h2
-  font-size 1.36rem
-  font-weight normal
-  margin 1.92rem 0 1.03rem 0.63rem
-  color #888899
-
-h3
-  font-size 0.96rem
-  font-weight normal
-  margin 1.22rem 0 0.99rem 0.63rem
-  color #888899
-
 
 /* p, span */
 .name,
@@ -74,63 +108,53 @@ h3
   margin 0 0 0 0.32rem
 
 .role,
-.desc,
 .date
   color gray
   font-size 85%
 
+p.description
+  line-height 1.21rem
+  padding-top 0.28rem
+  padding-left 0.28rem
 
-/* link */
-.link
-  color gray
-  font-size 90%
-  margin 0.3rem 0
-  padding 0
-  display inline-block
-  a
-    color gray
+/* code */
+code
+  background-color #444444
+  color #d2d2d2
+  padding 0.55rem 1.09rem
+  border none
+  margin 0
 
-li > p
-  margin 0.08rem 0
-
-p.desc > span.status.warn
-  color orange
-
-img.logo
+address
+  font-family monospace
   display block
-  margin 0.96rem 0.72rem
+  font-style normal
+  background-color #f0f0f5
+  padding 0.62rem 0.86rem
+  margin 1.2rem 0
 
-del > a
-  text-decoration line-through
+p.note > span.status.warn
+  color #ed872d
 
+/* product */
+.product h3.message
+  font-family 'Roboto Slab', sans-serif
+  font-weight bold
+  color #454545
+  margin 0.9rem 0 3.46rem 0.18rem
 
-.newsletter
-  input[type="text"],
-  input[type="submit"]
-    display inline-block
-
-  input[type="text"]
-    height 1.06rem
-    max-width 16.82rem
-    border 1px solid gray
-    padding 4px 6px
-    border-radius 2px
-
-  input[type="submit"]
-    background-color #f3f3f3
-    border 1px solid #888888
-    border-radius 2px
-    padding 0.27rem 1.64rem
-    margin 0.88rem 0 0 0.06rem
-    &:hover
-      background-color #d3d3d3
-
-
+/* screenshot */
 .screenshot
   margin 1.44rem 0
+  .grid
+    .row
+      > div:first-child
+        padding-left 0
   figure
     display inline-block !important
-    margin 0.32rem 1.07rem 0.48rem 0.69rem
+    margin 0.32rem 0 0.48rem 0
+    padding 0.86rem 0
+    width auto
     img
       display inline-block
       padding 0.3rem
@@ -142,11 +166,36 @@ del > a
       font-size 80%
       color gray
 
+svg.icon
+  display inline-block
+  margin 0.28rem 0.11rem 0 0.11rem
+  padding 0 0 0 0
+  vertical-align top
+  fill #4e575f
 
-@media only screen and (max-width 320px)
-  ul
-    -webkit-margin-start 55px
-    li
-      font-size 0.80em
-  p
-    font-size 0.90em
+code
+  svg.icon
+    margin-top 0.09rem
+
+svg.icon.pink
+  fill #f45660
+
+svg.icon.orange
+  fill #ed872d
+
+svg.icon.white
+  fill #f3f3f3
+
+@media only screen and (max-width 480px)
+  header
+    .menu
+      .item
+        font-size 0.9em
+        padding-left 0
+        padding-right 0
+        margin-left 0
+        margin-right 0
+        display block !important
+        &:last-child
+          padding-top 0
+          margin-top 0.13rem
