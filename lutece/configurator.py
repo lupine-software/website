@@ -40,7 +40,15 @@ class AssetConfigurator(object):
             pass
 
     def built_asset_file(self, filepath):  # (str) -> str
-        """Returns built asset file name if it is in manifest.json."""
+        """Returns built asset file name if it is in manifest.json.
+
+        >>> from lutece.configurator import AssetConfigurator
+        >>> c = AssetConfigurator('path/to/manifest.json')
+        >>> c._assets = {'bundle.svg': 'bundle.0123456789.svg'}
+
+        >>> c.built_asset_file('bundle.svg')
+        'bundle.0123456789.svg'
+        """
         if sys.version_info[0] < 3:
             key = filepath.encode()
         else:
@@ -51,18 +59,37 @@ class AssetConfigurator(object):
 
         return '{0}'.format(self.assets[key])
 
-    def svg_content(self, filepath):  # (str) -> str
-        """Returns svg content from filepath."""
+    def svg_content(self, filepath, sub_directory=''):  # (str) -> str
+        """Returns svg content from filepath.
+
+        manifest.json has only filename as key. If NODE_ENV is not `production`
+        (manifest.json does not exist), svg will be found in sub_directory.
+
+        manifest.json:
+            production: {"master.svg": "img/master.xxx.svg"}
+            development: none
+
+        >>> from lutece.configurator import AssetConfigurator
+        >>> c = AssetConfigurator('path/to/manifest.json')
+
+        >>> c.svg_content('bundle.svg', 'img')
+        ''
+        """
+
+        asset_file = self.built_asset_file(filepath)
+        if path.basename(asset_file) == filepath:
+            # built in NODE_ENV=development
+            asset_file = path.join(sub_directory, filepath)
+
         svg_file = path.join(
-            path.dirname(__file__), '..', 'static',
-            self.built_asset_file(filepath))
+            path.dirname(__file__), '..', 'static', asset_file)
 
         content = ''
         try:
             with open(svg_file) as f:
                 content = f.read()
         except IOError:
-            pass
+            return ''
 
         return Markup(clean(content, tags=['symbol', 'defs', 'path'],
                             attributes=['id', 'd']))
