@@ -1,3 +1,7 @@
+03 Nov 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
+	* Add pages (about, philosophy, history and contact)
+	* Update layout and style
+
 31 Oct 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
 	* Setup local ci runner
 	* Add unit tests
