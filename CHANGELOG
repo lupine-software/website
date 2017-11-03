@@ -1,5 +1,5 @@
 04 Nov 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
-	* Update Node.js from 7.10.1 to 9.0.0
+	* Update Node.js from 7.10.1 to 8.9.0
 	* Update npm packages
 	* Fix embeded svg tags of icon
 

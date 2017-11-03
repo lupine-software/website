@@ -28,7 +28,7 @@ https://gitlab.com/lupine-software/lutece)
 ## Requirements
 
 * Python `3.5` (or `2.7`)
-* Node.js `>= 9.0.0` (build, npm `>= 5.5.1`)
+* Node.js `>= 8.9.0` (build, npm `>= 5.5.1`)
 
 
 ## Setup
@@ -51,7 +51,7 @@ https://gitlab.com/lupine-software/lutece)
 
 ```
 (venv) % pip install nodeenv
-(venv) % nodeenv -p --node=9.0.0
+(venv) % nodeenv -p --node=8.9.0
 
 (venv) % source venv27/bin/activate
 (venv) % npm install -g npm@latest
