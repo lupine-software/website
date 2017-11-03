@@ -56,7 +56,8 @@ https://gitlab.com/lupine-software/lutece)
 (venv) % source venv27/bin/activate
 (venv) % npm install -g npm@latest
 
-(venv) % npm install -g gulp-cli eslint
+(venv) % npm install -g gulp-cli
+(venv) % npm install -g --engine-strict eslint @sonarwhal/sonar
 
 : this runs also `gulp` after install
 (venv) % npm install
