@@ -69,3 +69,37 @@ def test_built_asset_file_with_valid_manifest_json():
         'file.js': 'file.abc.js'} == configurator.assets
     assert 'file-123.css' == configurator.built_asset_file('file.css')
     assert 'file.abc.js' == configurator.built_asset_file('file.js')
+
+
+def test_svg_icon_with_missing_svg_file():
+    manifest_json = 'manifest.json'
+    configurator = AssetConfigurator(manifest_json)
+
+    content = """{
+"file.css": "file-123.css"
+}"""
+    dummy_app = build_dummy_app(content)
+    configurator.init_app(dummy_app)
+
+    assert '' == configurator.svg_icons('missing.svg')
+
+
+def test_svg_icon_rescure_path_tags():
+    from markupsafe import Markup
+
+    manifest_json = 'manifest.json'
+    configurator = AssetConfigurator(manifest_json)
+
+    content = '{}'
+    dummy_app = build_dummy_app(content)
+    configurator.init_app(dummy_app)
+
+    def dummy_load_svg(*_args, **_kwargs):
+        # unnecessary closing tags </path> will be created
+        return Markup(u'<symbol><defs><path d="1 2 3"></path></defs></symbol>')
+
+    # pylint: disable=protected-access
+    configurator._load_svg = dummy_load_svg
+
+    assert '''<symbol><defs><path d="1 2 3"/></defs></symbol>''' == \
+        str(configurator.svg_icons('icon.svg'))
