@@ -64,6 +64,12 @@ gulp.task('copy:txt', ['env'], function(done) {
   .pipe(copy('static/', {prefix: 3}));
 })
 
+gulp.task('copy:xml', ['env'], function(done) {
+  return gulp.src(path.resolve(assetsDir, '{sitemap,}.xml'))
+  .pipe(named())
+  .pipe(copy('static/', {prefix: 3}));
+})
+
 // builds master.js into %(appName)/tmp/build
 // this run webpack each times.
 gulp.task('build', [
@@ -126,6 +132,7 @@ gulp.task('copy', [
   'copy:img'
 , 'copy:favicon'
 , 'copy:txt'
+, 'copy:xml'
 ]);
 
 // distribute and copy
