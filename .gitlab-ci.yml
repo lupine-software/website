@@ -92,7 +92,7 @@ lint:
 
 build:
   stage: build
-  image: node:7.10.1
+  image: node:9.0.0
   variables:
     NODE_ENV: production
   before_script:
