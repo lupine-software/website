@@ -1,10 +1,18 @@
 # encoding: utf-8
 import json
 from os import path
+import re
 import sys
 
 from bleach import clean
 from markupsafe import Markup
+
+
+def rescue_svg_path(content):
+    """Rescues broken tags by `bleach.clean` (built in html5lib)."""
+    svg_content = re.sub(r'\</path\>', '', content)
+    return re.sub(r'(\<path[A-z\s=\"-\.0-9]*")(\s*\>)', "\\1/\\2",
+                  svg_content)
 
 
 class AssetConfigurator(object):
@@ -30,7 +38,7 @@ class AssetConfigurator(object):
         self._load_manifest_json()
 
         _app.add_template_global(self.built_asset_file)
-        _app.add_template_global(self.svg_content)
+        _app.add_template_global(self.svg_icons)
 
     def _load_manifest_json(self):  # () -> None
         try:
@@ -59,21 +67,19 @@ class AssetConfigurator(object):
 
         return '{0}'.format(self.assets[key])
 
-    def svg_content(self, filepath, sub_directory=''):  # (str) -> str
-        """Returns svg content from filepath.
+    def _load_svg(self, filepath, sub_directory='', **kwargs):
+        # (str, str, dict) -> str
+        """Returns svg content from filepath (if it exists).
 
         manifest.json has only filename as key. If NODE_ENV is not `production`
         (manifest.json does not exist), svg will be found in sub_directory.
 
-        manifest.json:
-            production: {"master.svg": "img/master.xxx.svg"}
-            development: none
-
-        >>> from lutece.configurator import AssetConfigurator
-        >>> c = AssetConfigurator('path/to/manifest.json')
-
-        >>> c.svg_content('bundle.svg', 'img')
-        ''
+        The content of manifest.json looks like:
+        ```
+        {
+          "master.svg": "img/master.0123456789.svg"
+        }
+        ```
         """
         asset_file = self.built_asset_file(filepath)
         if path.basename(asset_file) == filepath:
@@ -90,5 +96,29 @@ class AssetConfigurator(object):
         except IOError:
             return ''
 
-        return Markup(clean(content, tags=['symbol', 'defs', 'path'],
-                            attributes=['id', 'd']))
+        return Markup(clean(content, **kwargs))
+
+    def svg_icons(self, filepath):
+        """Returns svg icon tags.
+
+        >>> from lutece.configurator import AssetConfigurator
+        >>> c = AssetConfigurator('path/to/manifest.json')
+
+        `icon.svg` file must be in `static/img` directory.
+        The usage in template looks like that.
+
+        ```
+        {{svg_icons('file.svg')|safe}}
+        ```
+
+        >>> c.svg_icons('icon.svg')
+        ''
+        """
+        return rescue_svg_path(self._load_svg(
+            filepath,
+            sub_directory='img',
+            tags=['symbol', 'defs', 'path'],
+            attributes={
+                'symbol': ['id'],
+                'path': ['id', 'd', 'transform']
+            }))
