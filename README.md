@@ -28,7 +28,7 @@ https://gitlab.com/lupine-software/lutece)
 ## Requirements
 
 * Python `3.5` (or `2.7`)
-* Node.js `>= 7.10.1` (build)
+* Node.js `>= 9.0.0` (build, npm `>= 5.5.1`)
 
 
 ## Setup
@@ -51,16 +51,18 @@ https://gitlab.com/lupine-software/lutece)
 
 ```
 (venv) % pip install nodeenv
-(venv) % nodeenv -p --node=7.10.1
+(venv) % nodeenv -p --node=9.0.0
 
 (venv) % source venv27/bin/activate
-(venv) % npm install --upgrade -g npm
+(venv) % npm install -g npm@latest
+
+(venv) % npm install -g gulp-cli eslint
 
 : this runs also `gulp` after install
 (venv) % npm install
 
-(venv) % npm install -g gulp-cli
-(venv) % NODE_ENV=development gulp
+: same as NODE_ENV=development gulp
+(venv) % make build
 ```
 
 ### Dependencies
