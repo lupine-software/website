@@ -13,7 +13,7 @@
  _|    |   |  |  |/  /    |/
 (/\___/ \_/|_/|_/|__/\___/|__/
 
-Lutèce; LUpine sofTwarE website to introduCE about our product and ourselves
+Lutèce; LUpine sofTwarE website to introduCE about our products and ourselves
 ```
 
 The website of [Lupine Software](https://lupine-software.com).
