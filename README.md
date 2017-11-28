@@ -4,7 +4,7 @@
 
 [![pipeline status][pipeline]][commit] [![coverage report][coverage]][commit]
 
-![Lupine Software LLC](static/img/lupine-software-logo-300x300.png)
+![Lupine Software LLC](lutece/assets/img/lupine-software-logo-300x300.png)
 
 ```txt
    _
