@@ -16,9 +16,9 @@ check27:
   variables:
     PIP_CACHE_DIR: pip-cache
   before_script:
+    - pip install --upgrade pip setuptools
     - python --version
     - pip --version
-    - pip install --upgrade pip setuptools
     - pip install flake8 flake8-docstrings -c constraints.txt
     - make clean
   script:
@@ -36,9 +36,9 @@ check:
   variables:
     PIP_CACHE_DIR: pip-cache
   before_script:
+    - pip install --upgrade pip setuptools
     - python --version
     - pip --version
-    - pip install --upgrade pip setuptools
     - pip install flake8 flake8-docstrings -c constraints.txt
     - make clean
   script:
@@ -96,6 +96,7 @@ build:
   variables:
     NODE_ENV: production
   before_script:
+    - npm install -g npm@latest
     - node --version
     - npm --version
     - npm install --global gulp-cli
@@ -120,9 +121,9 @@ test27:
     PIP_CACHE_DIR: pip-cache
     ENV: test
   before_script:
+    - pip install --upgrade pip setuptools
     - python --version
     - pip --version
-    - pip install --upgrade pip setuptools
     - ENV=test make setup
   script:
     #- make coverage
@@ -141,9 +142,9 @@ test:
     PIP_CACHE_DIR: pip-cache
     ENV: test
   before_script:
+    - pip install --upgrade pip setuptools
     - python --version
     - pip --version
-    - pip install --upgrade pip setuptools
     - ENV=test make setup
   script:
     - make coverage
