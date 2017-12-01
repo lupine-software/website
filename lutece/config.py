@@ -20,6 +20,9 @@ class DevelopmentConfig(Config):
 class ProductionConfig(Config):
     DEBUG = False
     TEMPLATES_AUTO_RELOAD = False
+    STORAGE_BUCKET_HOST = 'localhost'
+    STORAGE_BUCKET_NAME = ''
+    STORAGE_BUCKET_PATH = '/'
 
 
 CONFIG = {

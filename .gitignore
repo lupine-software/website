@@ -1,5 +1,6 @@
 app.yaml
 appengine_config.py
+cors-file.json
 
 .env.ci
 .env

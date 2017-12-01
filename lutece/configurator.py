@@ -5,7 +5,10 @@ import re
 import sys
 
 from bleach import clean
+from flask import url_for
 from markupsafe import Markup
+
+UNSLASH_PATTERN = re.compile(r'^\/|\/$')
 
 
 def rescue_svg_path(content):
@@ -37,7 +40,9 @@ class AssetConfigurator(object):
         self._app = _app
         self._load_manifest_json()
 
+        # functions
         _app.add_template_global(self.hashed_asset_file)
+        _app.add_template_global(self.static_url)
         _app.add_template_global(self.svg_icons)
 
     def _load_manifest_json(self):  # () -> None
@@ -66,6 +71,27 @@ class AssetConfigurator(object):
             return filepath
 
         return '{0}'.format(self.assets[key])
+
+    def _unslashed_bucket(self, partial_name, default_value):
+        partial_value = self._app.config.get(
+            'STORAGE_BUCKET_{:s}'.format(partial_name.upper()),
+            default_value
+        )
+        return re.sub(UNSLASH_PATTERN, '', partial_value)
+
+    def static_url(self, **kwargs):
+        """Ruterns static url as path.
+
+        If in production, returns url of CDN if possible.
+        """
+        if self._app.config.get('ENV', 'production') == 'production':
+            return 'https://{host:s}/{name:s}/{path:s}/{filename:s}'.format(
+                host=self._unslashed_bucket('host', 'localhost'),
+                name=self._unslashed_bucket('name', ''),
+                path=self._unslashed_bucket('path', ''),
+                filename=kwargs.get('filename', ''),
+            )
+        return url_for('static', **kwargs)
 
     def _load_svg(self, filepath, sub_directory='', **kwargs):
         # (str, str, dict) -> str
