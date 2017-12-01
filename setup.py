@@ -13,6 +13,8 @@ with open(os.path.join(here, 'CHANGELOG')) as f:
 requires = [
     'bleach',
     'Flask',
+    'Flask-DotEnv',
+    'Flask-SSLify',
     'MarkupSafe'
 ]
 

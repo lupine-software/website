@@ -3,24 +3,36 @@ u"""Lutéce application."""
 
 from __future__ import print_function
 from __future__ import unicode_literals
-from os import path
+from os import path, getenv
 
 from flask import Flask, render_template
+from flask_sslify import SSLify
 
+from lutece.config import CONFIG
 from lutece.configurator import AssetConfigurator
 
 
+def __configure(_app):
+    # app.config
+    CONFIG[getenv('ENV', 'production')].init_app(_app)
+
+    # asset files
+    manifest_json = path.join(
+        path.dirname(__file__), '../static/manifest.json')
+    asset = AssetConfigurator(manifest_json)
+    asset.init_app(_app)
+
+    # ssl support
+    sslify = SSLify(_app, subdomains=True, skips=[
+        # does not need first slash
+        '_ah/health'
+    ])
+    sslify.init_app(_app)
+
+
 # pylint: disable=invalid-name
-manifest_json = path.join(path.dirname(__file__), '../static/manifest.json')
-
 app = Flask(__name__, static_folder='../static', static_url_path='')
-
-# development
-# app.config['DEBUG'] = True
-# app.config['TEMPLATES_AUTO_RELOAD'] = True
-
-config = AssetConfigurator(manifest_json)
-config.init_app(app)
+__configure(app)
 # pylint: enable=invalid-name
 
 
