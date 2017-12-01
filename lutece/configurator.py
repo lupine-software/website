@@ -18,7 +18,7 @@ def rescue_svg_path(content):
 class AssetConfigurator(object):
     """Configure class for asset files are built via webpack.
 
-    This provides `built_asset_file` method to get filename from
+    This provides `hashed_asset_file` method to get filename from
     manifest.json.
     """
 
@@ -37,7 +37,7 @@ class AssetConfigurator(object):
         self._app = _app
         self._load_manifest_json()
 
-        _app.add_template_global(self.built_asset_file)
+        _app.add_template_global(self.hashed_asset_file)
         _app.add_template_global(self.svg_icons)
 
     def _load_manifest_json(self):  # () -> None
@@ -47,14 +47,14 @@ class AssetConfigurator(object):
         except IOError:
             pass
 
-    def built_asset_file(self, filepath):  # (str) -> str
-        """Returns built asset file name if it is in manifest.json.
+    def hashed_asset_file(self, filepath):  # (str) -> str
+        """Returns hashed asset file name if it is in manifest.json.
 
         >>> from lutece.configurator import AssetConfigurator
         >>> c = AssetConfigurator('path/to/manifest.json')
         >>> c._assets = {'bundle.svg': 'bundle.0123456789.svg'}
 
-        >>> c.built_asset_file('bundle.svg')
+        >>> c.hashed_asset_file('bundle.svg')
         'bundle.0123456789.svg'
         """
         if sys.version_info[0] < 3:
@@ -81,7 +81,7 @@ class AssetConfigurator(object):
         }
         ```
         """
-        asset_file = self.built_asset_file(filepath)
+        asset_file = self.hashed_asset_file(filepath)
         if path.basename(asset_file) == filepath:
             # built in NODE_ENV=development
             asset_file = path.join(sub_directory, filepath)

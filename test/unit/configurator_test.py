@@ -31,7 +31,7 @@ def build_dummy_app(content):
     return DummyApp()
 
 
-def test_built_asset_file_with_missing_manifest_json():
+def test_hashed_asset_file_with_missing_manifest_json():
     manifest_json = 'manifest.json'
     configurator = AssetConfigurator(manifest_json)
 
@@ -39,10 +39,10 @@ def test_built_asset_file_with_missing_manifest_json():
     configurator.init_app(dummy_app)
 
     assert {} == configurator.assets
-    assert 'file.css' == configurator.built_asset_file('file.css')
+    assert 'file.css' == configurator.hashed_asset_file('file.css')
 
 
-def test_built_asset_file_with_empty_manifest_json():
+def test_hashed_asset_file_with_empty_manifest_json():
     manifest_json = 'manifest.json'
     configurator = AssetConfigurator(manifest_json)
 
@@ -50,10 +50,10 @@ def test_built_asset_file_with_empty_manifest_json():
     configurator.init_app(dummy_app)
 
     assert {} == configurator.assets
-    assert 'file.css' == configurator.built_asset_file('file.css')
+    assert 'file.css' == configurator.hashed_asset_file('file.css')
 
 
-def test_built_asset_file_with_valid_manifest_json():
+def test_hashed_asset_file_with_valid_manifest_json():
     manifest_json = 'manifest.json'
     configurator = AssetConfigurator(manifest_json)
 
@@ -67,8 +67,8 @@ def test_built_asset_file_with_valid_manifest_json():
     assert {
         'file.css': 'file-123.css',
         'file.js': 'file.abc.js'} == configurator.assets
-    assert 'file-123.css' == configurator.built_asset_file('file.css')
-    assert 'file.abc.js' == configurator.built_asset_file('file.js')
+    assert 'file-123.css' == configurator.hashed_asset_file('file.css')
+    assert 'file.abc.js' == configurator.hashed_asset_file('file.js')
 
 
 def test_svg_icon_with_missing_svg_file():
