@@ -21,6 +21,9 @@ p
 del > a
   text-decoration line-through
 
+a[target="_blank"]:hover
+  text-decoration-style wavy
+
 h1,
 h2,
 h3,
@@ -29,6 +32,10 @@ h5,
 h6
   font-family 'Open Sans', sans-serif
   font-weight normal
+
+h5
+  padding-top 0.88rem
+  padding-bottom 1.1rem
 
 
 /* header */
@@ -80,7 +87,7 @@ header .logo
       margin 0.67rem 0 0 0
 
 .divider
-  margin 3.14rem 0
+  margin 2.44rem 0
   border-top 1px solid #d3d3d3
 
 /* list */
@@ -138,15 +145,49 @@ p.note > span.status.warn
   color #ed872d
 
 /* product */
+.product .head
+  padding 0 0 3.33rem 0
+
+.product .service
+  padding 1.22rem 0
+  .logo
+    .logo-mark
+      text-decoration none
+      display inline-block
+      margin 0 0.18rem 0.14rem 0
+    .logo-type
+      text-decoration none
+      display inline-block
+      vertical-align top
+      margin 1.2rem 0 0 0.32rem
+      font-family 'Roboto Slab', serif
+      font-weight 300
+      font-size 1.58em
+      //color #f3f3f3
+      .scroll
+        //color #f2f2f2
+        color #444444
+        letter-spacing -0.002rem
+      .iris
+        color #a5a0ae
+        letter-spacing -0.011rem
+      .eloquent
+        color #c6d6ed
+        letter-spacing -0.002rem
+      .log
+        color #555555
+        letter-spacing -0.011rem
+
+
 .product h3.message
   font-family 'Roboto Slab', sans-serif
   font-weight bold
   color #454545
-  margin 0.9rem 0 3.46rem 0.18rem
+  margin 0.9rem 0 0.48rem 0.18rem
 
 /* screenshot */
 .screenshot
-  margin 1.44rem 0
+  padding 1.44rem 0 0 0
   .grid
     .row
       > div:first-child
@@ -167,9 +208,37 @@ p.note > span.status.warn
       font-size 80%
       color gray
 
+// products
+.scrolliris,
+.eloquentlog
+  padding 1.82rem 0 1.82rem 0
+
+// newsletter
+.newsletter
+  border-top 1px solid #d6d6d6
+  padding-top 3.86rem
+
+// mission
+.mission
+  .container
+    padding 0.66rem 0
+
+.scrolliris.label
+  color #f2f2f2
+  background-color #a5a0ae
+
+.eloquentlog.label
+  background-color #c6d6ed
+
+// svg
+.message
+  svg.icon
+    margin 0.48rem 0.31rem 0 0.31rem
+
+
 svg.icon
   display inline-block
-  margin 0.28rem 0.11rem 0 0.11rem
+  margin 0.28rem 0.18rem 0 0.18rem
   padding 0 0 0 0
   vertical-align top
   fill #4e575f

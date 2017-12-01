@@ -1,7 +1,7 @@
 <header>
   <a class="logo" href="{{url_for('.index')}}"><h1><img class="logo-mark" alt="Lupine Software's Logo" width="40" height="40" src="{{url_for('static', filename='img/lupine-software-logo-300x300.png')}}"><span class="logo-type">Lupine Software</span></h1></a>
   <div class="menu">
-    <a class="item{% if request.path == '/about' %} active{% endif %}" href="{{url_for('.about')}}">About</a>
+    <a class="item{% if request.path == '/about' %} active{% endif %}" href="{{url_for('.about')}}">Team</a>
     <a class="item{% if request.path == '/philosophy' %} active{% endif %}" href="{{url_for('.philosophy')}}">Philosophy</a>
     <a class="item{% if request.path == '/history' %} active{% endif %}" href="{{url_for('.history')}}">History</a>
     <a class="item{% if request.path == '/contact' %} active{% endif %}" href="{{url_for('.contact')}}">Contact</a>
