@@ -1,5 +1,5 @@
 # encoding: utf-8
-from os import getenv
+from os import environ
 
 from flask_dotenv import DotEnv
 
@@ -14,18 +14,20 @@ class Config(object):  # pylint: disable=no-init
 
 
 class DevelopmentConfig(Config):
+    ENV = 'development'
     DEBUG = True
     TEMPLATES_AUTO_RELOAD = True
 
 
 class ProductionConfig(Config):
+    ENV = 'production'
     DEBUG = False
     TEMPLATES_AUTO_RELOAD = False
     # use os.env for now
     # because production dose not have `.env` file
-    STORAGE_BUCKET_HOST = getenv('STORAGE_BUCKET_HOST', 'localhost')
-    STORAGE_BUCKET_NAME = getenv('STORAGE_BUCKET_NAME', '')
-    STORAGE_BUCKET_PATH = getenv('STORAGE_BUCKET_PATH', '')
+    STORAGE_BUCKET_HOST = environ.get('STORAGE_BUCKET_HOST', 'localhost')
+    STORAGE_BUCKET_NAME = environ.get('STORAGE_BUCKET_NAME', '')
+    STORAGE_BUCKET_PATH = environ.get('STORAGE_BUCKET_PATH', '')
 
 
 CONFIG = {
