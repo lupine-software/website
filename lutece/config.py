@@ -7,8 +7,10 @@ from flask_dotenv import DotEnv
 class Config(object):  # pylint: disable=no-init
     @classmethod
     def init_app(cls, app, env_name='development'):
-        app.config.from_object(CONFIG[env_name])
+        config_object = CONFIG[env_name]
+        app.config.from_object(config_object)
 
+        app.debug = config_object.DEBUG
         env = DotEnv()
         env.init_app(app, verbose_mode=True)
 
