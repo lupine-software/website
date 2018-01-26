@@ -136,7 +136,7 @@ This project is distributed as various licenses by parts.
 
 ```txt
 Lutèce
-Copyright (c) 2017 Lupine Software LLC
+Copyright (c) 2017-2018 Lupine Software LLC
 ```
 
 ### Documentation, Resource (image)
