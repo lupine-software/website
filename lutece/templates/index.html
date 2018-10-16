@@ -1,0 +1,105 @@
+{% extends "_layout.html" %}
+
+{% block body %}
+<section class="product">
+  <div class="grid">
+    <div class="head row">
+      <h3 class="message">We
+        devel<svg xmlns="http://www.w3.org/2000/svg" class="icon pink" width="24" height="24" viewBox="0 0 9 9" role="img" aria-label="[title]">
+          <title>develop</title>
+          <use xlink:href="#open-iconic.min_heart" class="icon-heart"></use></svg>p software.</h3>
+      <p class="description">We really love to help people arround us through software development and design work.</p>
+    </div>
+
+    <div class="service row">
+      <div class="column-8 column-l-16">
+        <div class="logo">
+          <img class="logo-mark" width="48" height="48" src="{{url_for('static', filename='img/scrolliris-logo-64x64.png')}}" alt="Scrolliris">
+          <span class="logo-type"><span class="scroll">Scroll</span><span class="iris">iris</span></span>
+        </div>
+        <p class="description"><a href="https://about.scrolliris.com/" target="_blank">Scrolliris</a>
+           is a publication platform which utilizes text readability analysis.</p>
+      </div>
+
+      <div class="column-8 column-l-16">
+        <div class="logo">
+          <img class="logo-mark" width="46" height="46" src="{{url_for('static', filename='img/eloquentlog-logo-72x72.png')}}" alt="Eloquentlog">
+          <span class="logo-type"><span class="eloquent">Eloquent</span><span class="log">log</span></span>
+        </div>
+        <p class="description"><a href="http://eloquentlog.com/" target="_blank">Eloquentlog</a>
+          is a changelog service to get profound impressions by each other.</a></p>
+      </div>
+    </div>
+
+    <div class="scrolliris row">
+      <h5>Scrolliris</h5>
+      <p class="description">Try our <a href="https://try.scrolliris.com/">Demo</a>. It's for now public beta. <a href="https://scrolliris.com/signup">Sign up</a> now!</p>
+
+      <div class="screenshot">
+        <h6 class="title">Screenshots from Prototype</h6>
+        <div class="grid">
+          <div class="row">
+            <div class="column-5 column-v-8 column-m-16">
+              <figure>
+                <a href="{{url_for('static', filename='img/scrolliris-reader-view-sample-20170611.png')}}" target="_blank">
+                  <img src="{{ url_for('static', filename='img/scrolliris-reader-view-sample-20170611-thumb.png')}}" width="200" alt="Scrolliris - reader's view example">
+                  <figcaption>Fig0. - Scrolliris reader's view sample</figcaption>
+                </a>
+              </figure>
+            </div>
+            <div class="column-5 column-v-8 column-m-16">
+              <figure>
+                <a href="{{url_for('static', filename='img/scrolliris-author-view-sample-20170611.png')}}" target="_blank">
+                  <img src="{{ url_for('static', filename='img/scrolliris-author-view-sample-20170611-thumb.png')}}" width="200" alt="Scrolliris - author's view example">
+                  <figcaption>Fig1. - Scrolliris author's view sample</figcaption>
+                </a>
+              </figure>
+            </div>
+            <div class="column-5 column-v-8 column-m-16">
+              <figure>
+                <a href="{{url_for('static', filename='img/scrolliris-minimap-widget-sample-20170710.png')}}" target="_blank">
+                  <img src="{{ url_for('static', filename='img/scrolliris-minimap-widget-sample-20170710-thumb.png')}}" width="200" alt="Scrolliris - reading heat-minimap widget sample">
+                  <figcaption>Fig2. - Scrolliris reading heat-minimap widget sample</figcaption>
+                </a>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="eloquentlog row">
+      <h5>Eloquentlog</h5>
+      <p class="description">under development ;)</p>
+    </div>
+  </div>
+
+  <div class="newsletter container">
+    <p>Subscribe product update newsletter/changelog from us!</p>
+
+    <span class="scrolliris rounded label">Scrolliris</span>
+    <span class="eloquentlog rounded label"><del>Eloquentlog</del></span>
+
+    <div class="flat box">
+      <h6>Scrolliris Newsletter</h6>
+      <form class="form" action="https://tinyletter.com/scrolliris" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/scrolliris', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+        <p class="description">
+           Product update newsletter about Scrolliris. Only once per month.
+           It's powered by <a href="https://tinyletter.com" target="_blank">TinyLetter</a>, all archives are available from <a href="https://tinyletter.com/scrolliris/archive">here</a></p>
+        <label class="label" for="tlemail">Enter your email address</label>
+        <div class="grid">
+          <div class="row">
+            <div class="field-8 field-m-16">
+              <input type="text" name="email" id="tlemail" />
+              <input type="hidden" value="1" name="embed"/>
+            </div>
+            <div class="field-8 field-m-16">
+             <input type="submit" class="primary flat button" value="Subscribe" />
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}

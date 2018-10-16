@@ -1,0 +1,55 @@
+{% extends "_layout.html" %}
+
+{% block body %}
+<section class="team">
+  <div class="grid">
+    <div class="row">
+      <h5 class="title">Member</h5>
+      <ul>
+        <li>
+          <span class="name">Yasuhiro Asaka</span>
+          <span class="role">Programmer</span>
+          <!--<a class="mail" href="mailto:yasuhiro.asaka@lupine-software.com">yasuhiro.asaka@lupine-software.com</a>--></li>
+        <li>
+          <span class="name">Misaki Asaka</span>
+          <span class="role">Designer</span>
+          <!--<a class="mail" href="mailto:misaki.asaka@lupine-software.com">misaki.asaka@lupine-software.com</a>--></li>
+      </ul>
+      <p><a href="{{url_for('static', filename='humans.txt')}}" target="_blank">humans.txt</a></p>
+    </div>
+
+    <div class="row">
+      <h5 class="title">Firm</h5>
+      <svg class="tiny icon" viewBox="0 0 8 8" width="16" height="16" role="img" aria-label="[title]">
+        <title>map-marker</title>
+        <use xlink:href="#open-iconic.min_map-marker" class="icon-marker"></use>
+      </svg>
+      <span class="secondary lined label">
+        Japan</span>
+      <address>
+Lupine Software LLC
+<br>
+<br>
+1545 Omagi, Oaza, Midori<br>
+4-503<br>
+Saitama, Japan, 336-0923</address>
+
+      <svg class="tiny icon" viewBox="0 0 8 8" width="16" height="16" role="img" aria-label="[title]">
+        <title>map-marker</title>
+        <use xlink:href="#open-iconic.min_map-marker" class="icon-marker"></use>
+      </svg>
+      <span class="secondary lined label">Switzerland</span>
+      <address>TBD</address>
+    </div>
+
+    <div class="row">
+      <h5 class="title">Credential</h5>
+      <p><a href="https://www.credential.net/xudv118k" target="_blank">
+        <img src="https://dl.grauwoelfchen.net/file/lupine-software/lupine-software-startup-school-badge-by-ycombinator-149782470388.png" width="60" height="60" alt="The Certificate of Startup School by Y Combinator">
+      </a></p>
+      <p class="description">We are a guraduate of <a href="https://www.startupschool.org/" target="_blank">Startup School</a> by Y Combinator (SUS2017).<br>
+         <a href="https://www.startupschool.org/presentations/199">Our pitch video presentation</a> for Scrolliris is live on their site as virtual presentation day.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}

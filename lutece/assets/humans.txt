@@ -10,6 +10,6 @@ Mail: misaki.asaka@lupine-software.com
 From: Kazo, Japan
 
 /* SITE */
-Last update: 2017/07/28
+Last update: 2018/01/26
 Language: English
 Doctype: HTML5

@@ -2,26 +2,39 @@
 
 `/lytɛs/`
 
-[![build status](https://gitlab.com/lupine-software/lutece/badges/master/build.svg)](https://gitlab.com/lupine-software/lutece/commits/master)
+[![pipeline status][pipeline]][commit] [![coverage report][coverage]][commit]
 
-![Lupine Software LLC](https://gitlab.com/lupine-software/lutece/raw/master/static/img/lupine-software-logo-300x300.png)
+![Lupine Software LLC](lutece/assets/img/lupine-software-logo-300x300.png)
 
 ```txt
-Lutèce; LUpine sofTwarE website to introduCE about our product and ourselves
+   _
+\_|_)             \
+  |          _|_  _   __   _
+ _|    |   |  |  |/  /    |/
+(/\___/ \_/|_/|_/|__/\___/|__/
+
+Lutèce; LUpine sofTwarE website to introduCE about our products and ourselves
 ```
 
 The website of [Lupine Software](https://lupine-software.com).
 
 
+## Repository
+
+[https://gitlab.com/lupine-software/lutece](
+https://gitlab.com/lupine-software/lutece)
+
+
 ## Requirements
 
-* Python `3.5`
+* Python `3.5` (or `2.7`)
+* Node.js `>= 8.9.0` (build, npm `>= 5.5.1`)
 
 
 ## Setup
 
 ```zsh
-: python
+: e.g. python3.5
 : setup venv as you like (e.g. use nodeenv on Gentoo Linux)
 % sudo emerge -av virtualenv (or just `sudo pip install virtualenv`)
 
@@ -34,6 +47,25 @@ The website of [Lupine Software](https://lupine-software.com).
 (venv) % pip install -r requirements.txt
 ```
 
+#### Node.js
+
+```
+(venv) % pip install nodeenv
+(venv) % nodeenv -p --node=8.9.0
+
+(venv) % source venv27/bin/activate
+(venv) % npm install -g npm@latest
+
+(venv) % npm install -g gulp-cli
+(venv) % npm install -g --engine-strict eslint @sonarwhal/sonar
+
+: this runs also `gulp` after install
+(venv) % npm install
+
+: same as NODE_ENV=development gulp
+(venv) % make build
+```
+
 ### Dependencies
 
 TODO
@@ -42,13 +74,18 @@ TODO
 ## Development
 
 ```zsh
-(venv) % python main.py
+(venv) % NODE_ENV=development gulp watch
+
+(venv) % make serve
 ```
 
 ### Style & Lint
 
 ```zsh
-(venv) % pip install pylint flake8
+(venv) % make check
+(venv) % make lint
+
+(venv) % make vet
 ```
 
 
@@ -65,7 +102,7 @@ E.g. Google App Engine
   downloads/google-cloud-sdk-<VERSION>-linux-x86_64.tar.gz
 
 : check sha256 checksum
-(venv) % echo "<CHECKSUM>" "" ./google-cloud-sdk-<VERSION>-linux-x86_64.tar.gz \
+(venv) % echo "CHECKSUM" "" ./google-cloud-sdk-<VERSION>-linux-x86_64.tar.gz \
   | sha256sum -c -
 ./google-cloud-sdk-<VERSION>-linux-x86_64.tar.gz: OK
 (venv) % tar zxvf google-cloud-sdk-<VERSION>-linux-x86_64.tar.gz
@@ -87,28 +124,59 @@ E.g. Google App Engine
 
 ## Testing
 
-TODO
+```zsh
+(venv) % make test
+(venv) % make coverage
+```
 
 
 ## License
 
-Lutèce; Copyright (c) 2017 Lupine Software LLC
+This project is distributed as various licenses by parts.
 
-### Software
+```txt
+Lutèce
+Copyright (c) 2017-2018 Lupine Software LLC
+```
 
-This is free software;  
-You can redistribute it and/or modify it under the terms of
-the GNU Affero General Public License (AGPL).
+### Documentation, Resource (image)
 
-See `LICENSE`.
+`CC-BY-NC-SA-4.0`
 
-### Documentation, content and images
+The files in the `static/img` directory are licensed under the
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+Public License.
 
 [![Creative Commons License](
 https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](
-http://creativecommons.org/licenses/by-nc-sa/4.0/)  
-This work is licensed under a [
-Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
-License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+http://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-See [Legalcode](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
+Check the [Legalcode](
+https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
+
+
+### Software (program)
+
+`AGPL-3.0`
+
+```txt
+This is free software: You can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+```
+
+See [LICENSE](LICENSE).
+
+
+[pipeline]: https://gitlab.com/lupine-software/lutece/badges/master/build.svg
+[coverage]: https://gitlab.com/lupine-software/lutece/badges/master/coverage.svg
+[commit]: https://gitlab.com/lupine-software/lutece/commits/master

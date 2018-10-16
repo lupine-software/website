@@ -1,7 +1,28 @@
 app.yaml
+appengine_config.py
+cors-file.json
 
-lib/*
+.env.ci
+.env
 
-/bin/*.sh
+.coverage
+.cache
+
+.*-version
+
+*.pyc
+*.egg-info
+
+/bin/deliver
+/bin/gitlab-ci-multi-runner
+
+/lib
+/vendor
+
+node_modules
+
+static/*
+tmp
 
 venv
+venv27

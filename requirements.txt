@@ -1,3 +1,2 @@
-Flask==0.12.1
-# production
-gunicorn==19.7.1
+-c constraints.txt
+-e '.[production]'
