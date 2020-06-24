@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="{{ config.extra.description }}">
+  <meta name="author" content="{{ config.extra.author }}">
+  <meta name="keywords" content="{{ config.extra.keywords }}">
+  <title>{{ config.title }}</title>
+  <link rel="shortcut icon" type="image/x-icon" href="{{ get_url(path='favicon.ico', _external=True) }}">
+  <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 96x86 128x128 192x192" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ get_url(path='img/favicon-192.png') }}">
+  <link rel="icon" type="image/png" sizes="128x128" href="{{ get_url(path='img/favicon-128.png') }}">
+  <link rel="icon" type="image/png" sizes="96x96" href="{{ get_url(path='img/favicon-96.png') }}">
+  <link rel="icon" type="image/png" sizes="64x64" href="{{ get_url(path='img/favicon-64.png') }}">
+  <link rel="icon" type="image/png" sizes="48x48" href="{{ get_url(path='img/favicon-48.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path='img/favicon-32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path='img/favicon-16.png') }}">
+  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="{{ get_url(path='img/touch-icon-180.png') }}">
+  <link rel="apple-touch-icon" type="image/png" sizes="167x167" href="{{ get_url(path='img/touch-icon-167.png') }}">
+  <link rel="apple-touch-icon" type="image/png" sizes="152x152" href="{{ get_url(path='img/touch-icon-152.png') }}">
+  <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="{{ get_url(path='img/touch-icon-120.png') }}">
+  <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="{{ get_url(path='img/touch-icon-76.png') }}">
+  <link rel="apple-touch-icon" type="image/png" sizes="57x57" href="{{ get_url(path='img/touch-icon-57.png') }}">
+  <link rel="author" type="text/plain" href="{{ get_url(path='humans.txt') }}">
+  <link rel="license" type="text/html" href="https://gitlab.com/lupine-software/lutece/blob/master/LICENSE">
+  <link rel="sitemap" type="application/xml" title="sitemap" href="/sitemap.xml">
+  <style>body{background-color:#ffffff;}</style>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400|Roboto+Slab:300" rel="stylesheet">
+  <link rel="stylesheet" href="{{ get_url(path='css/master.css') }}">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="grid">
+      <div class="row">
+        <div class="offset-4 column-8 offset-v-4 column-v-8 offset-l-3 column-l-10 offset-m-2 column-m-12 offset-n-1 column-n-14 column-s-16">
+          {% include "partials/_header.html" %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-4 column-8 offset-v-4 column-v-8 offset-l-3 column-l-10 offset-m-2 column-m-12 offset-n-1 column-n-14 column-s-16">
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-4 column-8 offset-v-4 column-v-8 offset-l-3 column-l-10 offset-m-2 column-m-12 offset-n-1 column-n-14 column-s-16">
+          {% include "partials/_footer.html" %}
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+#!/bin/sh
+
+set -eu
+
+renew="${DISCARD_CACHE:-false}"
+
+base_url="https://github.com/getzola/zola/releases/download/"
+version="0.11.0"
+arch="x86_64-unknown-linux-gnu"
+
+root_dir="$(dirname $(readlink -f "${0}"))/zola"
+bin_path="${root_dir}/${version}/zola"
+
+if [ -f "${bin_path}" ] && [ "${renew}" != "true" ]; then
+  echo "zola ${version} has been already installed in ${bin_path}"
+else
+  rm -fr $root_dir
+  mkdir -p $root_dir/$version
+  cd $root_dir
+  if [ ! -f "zola-v${version}-${arch}.tar.gz" ]; then
+    curl -sLO $base_url/v$version/zola-v$version-$arch.tar.gz
+  fi
+  tar zxvf zola-v$version-$arch.tar.gz \
+    -C $version --strip-components=0
+fi

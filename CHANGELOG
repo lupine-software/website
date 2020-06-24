@@ -1,53 +1,56 @@
-Thu 26 Jan 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
+Wed 24 Jun 2020; Yasuhiro Яша Asaka <yasuhiro.asaka@grauwoelfchen.net>:
+	* Start renewing as static site
+
+Thu 26 Jan 2017; Yasuhiro Яша Asaka <yasuhiro.asaka@grauwoelfchen.net>:
 	* Update lint libraries
 	* Update styr to v0.0.29
 
-Sat 04 Nov 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
+Sat 04 Nov 2017; Yasuhiro Яша Asaka <yasuhiro.asaka@grauwoelfchen.net>:
 	* Update Node.js from 7.10.1 to 8.9.0
 	* Update npm packages
 	* Fix embeded svg tags of icon
 
-Fri 03 Nov 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
+Fri 03 Nov 2017; Yasuhiro Яша Asaka <yasuhiro.asaka@grauwoelfchen.net>:
 	* Add pages (about, philosophy, history and contact)
 	* Update layout and style
 
-Tue 31 Oct 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
+Tue 31 Oct 2017; Yasuhiro Яша Asaka <yasuhiro.asaka@grauwoelfchen.net>:
 	* Setup local ci runner
 	* Add unit tests
 	* Refactor ci job configuration
 	* Fix configurator for python 3.5
 
-Mon 30 Oct 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
+Mon 30 Oct 2017; Yasuhiro Яша Asaka <yasuhiro.asaka@grauwoelfchen.net>:
 	* Add manifest.json support
 	* Move assets files from static into assets directory
 	* Add webpack bulding (via gulp) support
 
-Sat 09 Sep 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
+Sat 09 Sep 2017; Yasuhiro Яша Asaka <yasuhiro.asaka@grauwoelfchen.net>:
 	* Add python 2.7 support
 	* Update progress (reorder, add)
 
-Mon 28 Jul 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
+Mon 28 Jul 2017; Yasuhiro Яша Asaka <yasuhiro.asaka@grauwoelfchen.net>:
 	* Add touch icons
 	* Add reset css
 
-Wed 19 Jul 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
+Wed 19 Jul 2017; Yasuhiro Яша Asaka <yasuhiro.asaka@grauwoelfchen.net>:
 	* Update progress
 	* Add scrolliris's logo
 	* Add more favicons
 
-Fri 14 Jul 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
+Fri 14 Jul 2017; Yasuhiro Яша Asaka <yasuhiro.asaka@grauwoelfchen.net>:
 	* Arrange firm name `Lupine Software LLC` (without comma)
 
-Sun 09 Jul 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
+Sun 09 Jul 2017; Yasuhiro Яша Asaka <yasuhiro.asaka@grauwoelfchen.net>:
 	* Add a logo file (300x300)
 
-Mon 19 Jun 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
+Mon 19 Jun 2017; Yasuhiro Яша Asaka <yasuhiro.asaka@grauwoelfchen.net>:
 	* Add articles (credential, status)
 	* Add a server status link
 
-Wed 14 Jun 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
+Wed 14 Jun 2017; Yasuhiro Яша Asaka <yasuhiro.asaka@grauwoelfchen.net>:
 	* Update scrolliris link
 	* Fix wording (description)
 
-Fri 12 Jun 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
+Fri 12 Jun 2017; Yasuhiro Яша Asaka <yasuhiro.asaka@grauwoelfchen.net>:
 	* Initial commit

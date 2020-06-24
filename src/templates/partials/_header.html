@@ -1,0 +1,9 @@
+<header>
+  <a class="logo" href="{{ get_url(path='@/_index.md') }}"><h1><img class="logo-mark" alt="Lupine Software's Logo" width="40" height="40" src="{{ get_url(path='img/lupine-software-logo-300x300.png') }}"><span class="logo-type">Lupine Software</span></h1></a>
+  <div class="menu">
+    <a class="item{% if current_path == '/' %} active{% endif %}" href="{{ get_url(path='@/_index.md') }}">Top</a>
+    <a class="item{% if current_path == 'philosophy/' %} active{% endif %}" href="{{ get_url(path='@/philosophy.md') }}">Philosophy</a>
+    <a class="item{% if current_path == 'history/' %} active{% endif %}" href="{{ get_url(path='@/history.md') }}">History</a>
+    <a class="item{% if current_path == 'contact/' %} active{% endif %}" href="{{ get_url(path='@/contact.md') }}">Contact</a>
+  </div>
+</header>

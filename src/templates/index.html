@@ -1,0 +1,36 @@
+{% extends "_layout.html" %}
+
+{% block content -%}
+<section class="product">
+  <div class="grid">
+    <div class="head row">
+      <h3 class="message">We devel♡p software.</h3>
+      <p class="description">We love to help people arround us with software development and design work.</p>
+    </div>
+
+    <div class="service row">
+      <div class="column-8 column-l-16">
+        <h2 class="logo">
+          <img class="logo-mark" width="48" height="48" src="{{ get_url(path='img/scrolliris-logo-64x64.png') }}" alt="Scrolliris">
+          <span class="logo-type"><span class="scroll">Scroll</span><span class="iris">iris</span></span>
+        </h2>
+        <p class="description">
+          <span>Scrolliris</span>is a text readability analysis application utilizes anonymized data.<br/>
+          It's available only for beta users for now.
+        </p>
+      </div>
+
+      <div class="column-8 column-l-16">
+        <h2 class="logo">
+          <img class="logo-mark" width="46" height="46" src="{{ get_url(path='img/eloquentlog-logo-72x72.png') }}" alt="Eloquentlog">
+          <span class="logo-type"><span class="eloquent">Eloquent</span><span class="log">log</span></span>
+        </h2>
+        <p class="description">
+          <span>Eloquentlog</span>is a changelog service to get profound impressions by each other.<br/>
+          This is under development ;)
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+{%- endblock content -%}

@@ -1,0 +1,228 @@
+body {
+  background: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  zoom: 100%;
+}
+
+header,
+footer {
+  margin-left: 0.18rem;
+}
+
+header {
+  padding-left: 0.39rem;
+}
+
+footer {
+  margin-top: 2.98rem;
+  padding-left: 0.71rem;
+}
+
+.wrapper section {
+  padding: 0.92rem 0.81rem;
+}
+
+p {
+  font-family: 'Roboto Slab', sans;
+  line-height: 1.36em;
+}
+
+del > a {
+  text-decoration: line-through;
+}
+
+a[target="_blank"]:hover {
+  text-decoration-style: wavy;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 1.12rem;
+  margin-top: 1.85rem;
+}
+
+h5 {
+  padding-top: 0.88rem;
+  padding-bottom: 1.1rem;
+}
+
+/* header */
+header .menu {
+  margin-top: 0.81rem;
+}
+
+header .menu .item {
+  text-decoration: none;
+}
+
+header .menu .item:first-child {
+  padding-left: 0.48rem;
+}
+
+header .menu .item:last-child {
+  padding-right: 0.35rem;
+}
+
+header .menu .item:not(:last-child) {
+  padding: 0.18rem 0.48rem 0.21rem 0.48rem;
+}
+
+header .menu .item.active {
+  border-bottom: 1px solid lightgray;
+}
+
+header .menu .item:hover,
+header .menu .item.active {
+  background: none;
+  border-bottom: 1px solid darkgray;
+  border-radius: 0;
+  padding-bottom: 0.11rem;
+  text-decoration: none;
+}
+
+header .logo {
+  text-decoration: none;
+  color: #666666;
+}
+
+header h1 {
+  margin: 0.82rem 0 0.62rem 0.22rem;
+  padding: 0;
+  font-size: 1.22em;
+  font-weight: normal;
+  display: inline-block;
+  vertical-align: top;
+}
+
+header .logo-mark,
+header .logo-type,
+.service .logo-mark,
+.service .logo-type {
+  display: inline-block;
+}
+
+header .logo-mark,
+.service .logo-mark {
+  margin; 0 1.08rem 0 0.54rem;
+}
+
+header .logo-type,
+.service .logo-type {
+  font-family: 'Open Sans', serif;
+  font-size: 0.998em;
+  vertical-align: top;
+  margin: 0.67rem 0 0 0.63rem;
+}
+
+.divider {
+  margin: 2.44rem 0;
+  border-top: 1px solid #d3d3d3;
+}
+
+article > div {
+  margin-left: 1.066rem;
+}
+
+/* list */
+ul {
+  padding-left: 1.6rem;
+  margin: 0.22rem 0 1.23rem 0;
+}
+
+ul li {
+  line-height: 1.3em;
+}
+
+li > p {
+  margin: 0.08rem 0;
+}
+
+/* image */
+section.product img {
+  margin: 0 0 0.32rem 0.03rem;
+}
+
+section.credential img {
+  margin: 0.71rem 0 0.22rem 0.63rem;
+}
+
+/* p, span */
+.name,
+.role,
+.mail,
+.date {
+  display: inline-block;
+  margin: 0 0 0 0.32rem;
+}
+
+.role,
+.date {
+  color: gray;
+  font-size: 85%;
+}
+
+p.description {
+  line-height: 1.21rem;
+  padding-top: 0.28rem;
+  padding-left: 0.28rem;
+}
+
+.service .logo-type {
+  margin-top: 1.06rem;
+  font-size: 1.09rem;
+}
+
+/* svg */
+.message svg.icon {
+  margin: 0.48rem 0.31rem 0 0.31rem;
+}
+
+
+svg.icon {
+  display: inline-block;
+  margin: 0.28rem 0.18rem 0 0.18rem;
+  padding: 0 0 0 0;
+  vertical-align: top;
+  fill: #4e575f;
+}
+
+code svg.icon {
+  margin-top: 0.09rem;
+}
+
+svg.icon.pink {
+  fill: #f45660;
+}
+
+svg.icon.orange {
+  fill: #ed872d;
+}
+
+svg.icon.white {
+  fill: #f3f3f3;
+}
+
+@media only screen and (max-width 480px) {
+  header .menu .item {
+    font-size: 0.9em;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    display: block !important;
+  }
+
+  header .menu .item:last-child {
+    padding-top: 0;
+    margin-top: 0.13rem;
+  }
+}
