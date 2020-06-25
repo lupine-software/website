@@ -1,8 +1,8 @@
 stages:
-  - pages
+  - deploy
 
-publish:
-  stage: pages
+pages:
+  stage: deploy
   before_script:
     - make setup
   script:
