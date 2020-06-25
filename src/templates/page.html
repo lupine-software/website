@@ -3,6 +3,8 @@
 {% block content -%}
 <article>
   <header></header>
-  <div>{{ page.content | safe }}</div>
+  <section>
+    {{ page.content | safe }}
+  </section>
 </article>
 {%- endblock content -%}

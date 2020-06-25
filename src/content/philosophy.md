@@ -2,11 +2,11 @@
 title = "Philosophy"
 +++
 
-## Transparency
+### Transparency
 
 We cherish transparency. Our all software and work is free software.  
 We love free software and respect open source movement.
-Check out our repositories on GitLab.com.
+Check out our repositories hosted on GitLab.com.
 
 * [Scrolliris](https://gitlab.com/scrolliris)
 * [Eloquentlog](https://gitlab.com/eloquentlog)

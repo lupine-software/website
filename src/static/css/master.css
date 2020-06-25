@@ -19,7 +19,7 @@ footer {
 }
 
 .wrapper section {
-  padding: 0.92rem 0.81rem;
+  padding: 0.72rem 1.21rem;
 }
 
 p {
@@ -45,14 +45,15 @@ h6 {
   font-weight: normal;
 }
 
-h2 {
+h3 {
   font-size: 1.12rem;
   margin-top: 1.85rem;
+  margin-left: 0.06rem;
 }
 
 h5 {
   padding-top: 0.88rem;
-  padding-bottom: 1.1rem;
+  padding-bottom: 0.41rem;
 }
 
 /* header */
@@ -62,18 +63,19 @@ header .menu {
 
 header .menu .item {
   text-decoration: none;
+  padding: 0.06rem 0.129rem;
 }
 
 header .menu .item:first-child {
-  padding-left: 0.48rem;
+  margin-left: 0.48rem;
 }
 
 header .menu .item:last-child {
-  padding-right: 0.35rem;
+  margin-right: 0.35rem;
 }
 
 header .menu .item:not(:last-child) {
-  padding: 0.18rem 0.48rem 0.21rem 0.48rem;
+  margin: 0.18rem 0.48rem 0.21rem 0.48rem;
 }
 
 header .menu .item.active {
@@ -151,10 +153,6 @@ section.product img {
   margin: 0 0 0.32rem 0.03rem;
 }
 
-section.credential img {
-  margin: 0.71rem 0 0.22rem 0.63rem;
-}
-
 /* p, span */
 .name,
 .role,
@@ -173,7 +171,6 @@ section.credential img {
 p.description {
   line-height: 1.21rem;
   padding-top: 0.28rem;
-  padding-left: 0.28rem;
 }
 
 .service .logo-type {
@@ -181,11 +178,21 @@ p.description {
   font-size: 1.09rem;
 }
 
+pre {
+  background-color: #ffffff !important;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+pre span {
+  color: #4e575f !important;
+}
+
 /* svg */
 .message svg.icon {
   margin: 0.48rem 0.31rem 0 0.31rem;
 }
-
 
 svg.icon {
   display: inline-block;
