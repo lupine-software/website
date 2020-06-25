@@ -1,0 +1,19 @@
+stages:
+  - pages
+
+publish:
+  stage: pages
+  before_script:
+    - make setup
+  script:
+    - make build
+  cache:
+    untracked: true
+    paths:
+      - tool/zola
+  artifacts:
+    untracked: true
+    paths:
+      - public
+  only:
+    - master
