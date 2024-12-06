@@ -1,7 +1,7 @@
 {% extends "_layout.html" %}
 
 {% block content -%}
-<section class="product">
+<section class="main">
   <div class="grid">
     <div class="head row">
       <h3 class="message">We devel♡p software.</h3>
@@ -9,8 +9,10 @@
     </div>
 
     <div class="service row">
-      <div class="column-8 column-l-16">
-        <h5>Our products</h5>
+      <div class="">
+        <h4>Our products</h4>
+      <div>
+      <div class="product">
         <h2 class="logo">
           <img class="logo-mark" width="48" height="48" src="{{ get_url(path='img/scrolliris-logo-64x64.png') }}" alt="Scrolliris">
           <span class="logo-type"><span class="scroll">Scroll</span><span class="iris">iris</span></span>
@@ -21,7 +23,7 @@
         </p>
       </div>
 
-      <div class="column-8 column-l-16">
+      <div class="product">
         <h2 class="logo">
           <img class="logo-mark" width="46" height="46" src="{{ get_url(path='img/eloquentlog-logo-72x72.png') }}" alt="Eloquentlog">
           <span class="logo-type"><span class="eloquent">Eloquent</span><span class="log">log</span></span>

@@ -1,6 +1,10 @@
 body {
-  background: #ffffff;
+  background-color: #ffffff;
   font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
   zoom: 100%;
 }
 
@@ -10,16 +14,35 @@ footer {
 }
 
 header {
+  margin-top: 0.42rem;
   padding-left: 0.39rem;
 }
 
 footer {
+  min-height: 4.3rem;
   margin-top: 2.98rem;
   padding-left: 0.71rem;
 }
 
+.wrapper {
+  height: 100vh;
+}
+
+.grid {
+  height: 100%;
+}
+
+.grid .row {
+  display: block;
+}
+
 .wrapper section {
-  padding: 0.72rem 1.21rem;
+  padding: 0.72rem 1.18rem;
+}
+
+.wrapper > .grid > .row.nav {
+  background-color: #e3e3e3;
+  height: 8.59rem;
 }
 
 p {
@@ -47,8 +70,15 @@ h6 {
 
 h3 {
   font-size: 1.12rem;
+  margin-top: 1.65rem;
+  margin-left: 0.06rem;
+}
+
+h4 {
+  font-size: 1.06rem;
   margin-top: 1.85rem;
   margin-left: 0.06rem;
+  padding-bottom: 0.66rem;
 }
 
 h5 {
@@ -56,48 +86,45 @@ h5 {
   padding-bottom: 0.41rem;
 }
 
+.product {
+  margin: 9px 0;
+}
+
 /* header */
 header .menu {
-  margin-top: 0.81rem;
+  margin-top: 0.41rem;
+  margin-bottom: 0.22rem;
 }
 
 header .menu .item {
   text-decoration: none;
-  padding: 0.06rem 0.129rem;
-}
-
-header .menu .item:first-child {
-  margin-left: 0.48rem;
-}
-
-header .menu .item:last-child {
-  margin-right: 0.35rem;
-}
-
-header .menu .item:not(:last-child) {
   margin: 0.18rem 0.48rem 0.21rem 0.48rem;
 }
 
-header .menu .item.active {
-  border-bottom: 1px solid lightgray;
-}
-
-header .menu .item:hover,
-header .menu .item.active {
+header .menu .item:hover {
   background: none;
-  border-bottom: 1px solid darkgray;
+  border-bottom: 1px solid #898989;
   border-radius: 0;
-  padding-bottom: 0.11rem;
+  margin-bottom: 2px;
   text-decoration: none;
 }
 
-header .logo {
+header .menu .item.active {
+  background: none;
+  border-bottom: 1px solid #b9b9b9;
+  border-radius: 0;
+  margin-bottom: 2px;
+  text-decoration: none;
+}
+
+header .logo,
+header .logo:hover {
   text-decoration: none;
   color: #666666;
 }
 
 header h1 {
-  margin: 0.82rem 0 0.62rem 0.22rem;
+  margin: 0.22rem 0 0.62rem 0.22rem;
   padding: 0;
   font-size: 1.22em;
   font-weight: normal;
@@ -114,7 +141,7 @@ header .logo-type,
 
 header .logo-mark,
 .service .logo-mark {
-  margin; 0 1.08rem 0 0.54rem;
+  margin; 0 1.08rem 0 0.94rem;
 }
 
 header .logo-type,
@@ -122,12 +149,16 @@ header .logo-type,
   font-family: 'Open Sans', serif;
   font-size: 0.998em;
   vertical-align: top;
-  margin: 0.67rem 0 0 0.63rem;
+  margin: 0.67rem 0 0 1.18rem;
 }
 
 .divider {
   margin: 2.44rem 0;
   border-top: 1px solid #d3d3d3;
+}
+
+article > section {
+  padding-top: 0 !important;
 }
 
 article > div {
@@ -149,7 +180,7 @@ li > p {
 }
 
 /* image */
-section.product img {
+section.main img {
   margin: 0 0 0.32rem 0.03rem;
 }
 
@@ -187,6 +218,12 @@ pre {
 
 pre span {
   color: #4e575f !important;
+}
+
+code {
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* svg */
