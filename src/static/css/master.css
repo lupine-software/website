@@ -86,8 +86,17 @@ h5 {
   padding-bottom: 0.41rem;
 }
 
+h2.logo {
+  margin-bottom: 0;
+}
+
 .product {
-  margin: 9px 0;
+  margin: 32px 0;
+}
+
+span.label {
+  display: inline-block;
+  margin: 0 0 0.32rem 0;
 }
 
 /* header */
@@ -201,7 +210,13 @@ section.main img {
 
 p.description {
   line-height: 1.21rem;
-  padding-top: 0.28rem;
+  margin-top: 0.42rem;
+  padding-top: 0.09rem;
+}
+
+p.description a {
+  display: inline-block;
+  margin: 0 0.29rem;
 }
 
 .service .logo-type {
