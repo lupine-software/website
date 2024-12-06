@@ -8,7 +8,7 @@ Very happy to hear from you.
 We can respond in English, German, Swiss German and Japanese.
 
 ```txt
-Yasuhiro Яша Asaka
+Yasha Asaka
 +81 90 6509 7532
 ```
 
