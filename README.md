@@ -15,7 +15,7 @@ https://lupine-software.com/
 This project is distributed under multiple licenses.
 
 ```txt
-Copyright (c) 2017-2020 Lupine Software LLC
+Copyright (c) 2017-2025 Lupine Software LLC
 ```
 
 ### Texts and resources
