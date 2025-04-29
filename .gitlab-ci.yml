@@ -1,3 +1,4 @@
+---
 stages:
   - deploy
 
@@ -16,4 +17,4 @@ pages:
     paths:
       - public
   only:
-    - master
+    - trunk
