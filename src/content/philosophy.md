@@ -4,10 +4,12 @@ title = "Philosophy"
 
 ### Transparency
 
-We cherish transparency. Our all software and work is free software.  
+We value transparency. Our all software and work is free software.  
 We love free software and respect open source movement.
-Check out our repositories hosted on GitLab.com.
 
+Check out our repositories:
+
+* [Lecturepad](https://codeberg.org/lupine-software/lecturepad) (tentative)
 * [Scrolliris](https://gitlab.com/scrolliris)
 * [Eloquentlog](https://gitlab.com/eloquentlog)
 

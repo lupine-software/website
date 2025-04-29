@@ -68,6 +68,10 @@ h6 {
   font-weight: normal;
 }
 
+h1 {
+  font-weight: bold;
+}
+
 h3 {
   font-size: 1.12rem;
   margin-top: 1.65rem;
@@ -76,27 +80,34 @@ h3 {
 
 h4 {
   font-size: 1.06rem;
-  margin-top: 1.85rem;
+  margin-top: 2.12rem;
   margin-left: 0.06rem;
+  margin-bottom: 0.93rem;
   padding-bottom: 0.66rem;
 }
 
 h5 {
+  font-size: 0.98rem;
+  margin-top: 1.55rem;
   padding-top: 0.88rem;
   padding-bottom: 0.41rem;
 }
 
-h2.logo {
+h3.logo {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
-.product {
-  margin: 32px 0;
+.main .head {
+  margin-bottom: 3.96rem;
 }
 
-span.label {
-  display: inline-block;
-  margin: 0 0 0.32rem 0;
+.product {
+  margin: 0.9rem 0 2.41rem 0;
+}
+
+hr {
+  margin: 2.82rem 0;
 }
 
 /* header */
@@ -221,6 +232,7 @@ p.description a {
 
 .service .logo-type {
   margin-top: 1.06rem;
+  margin-left: 0.89rem;
   font-size: 1.09rem;
 }
 
